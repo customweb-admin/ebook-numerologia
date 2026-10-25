@@ -5,21 +5,190 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vidia • Manual Oficial de Numerología Pitagórica Integral</title>
   
-  <!-- Tipografías de alta legibilidad editorial -->
+  <!-- Tipografías editoriales de alta calidad -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Hoja de estilos compartida con el ebook -->
-  <link rel="stylesheet" href="styles.css">
-
   <style>
-    /* Estilos específicos de la portada e índice general */
+    /* ==========================================================================
+       VARIABLES Y RESET EDITORIAL VIDIA (AUTO-CONTENIDO)
+       ========================================================================== */
+    :root {
+      --vidia-primary: #4338ca;
+      --vidia-primary-dark: #312e81;
+      --vidia-primary-light: #e0e7ff;
+      --vidia-accent: #7c3aed;
+      --vidia-emerald: #059669;
+      --vidia-emerald-light: #d1fae5;
+      --vidia-rose: #e11d48;
+      --vidia-rose-light: #ffe4e6;
+      --vidia-amber: #d97706;
+      --vidia-amber-light: #fef3c7;
+      --vidia-slate-900: #0f172a;
+      --vidia-slate-800: #1e293b;
+      --vidia-slate-700: #334155;
+      --vidia-slate-600: #475569;
+      --vidia-slate-500: #64748b;
+      --vidia-slate-300: #cbd5e1;
+      --vidia-slate-200: #e2e8f0;
+      --vidia-slate-100: #f1f5f9;
+      --vidia-slate-50: #f8fafc;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Lora', Georgia, serif;
+      --font-cinzel: 'Cinzel', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --content-max-width: 980px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: #f8fafc;
+      color: var(--vidia-slate-800);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* --------------------------------------------------------------------------
+       CABECERA GLOBAL STICKY
+       -------------------------------------------------------------------------- */
+    .global-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--vidia-slate-200);
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+      padding: 0.75rem 1.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: var(--vidia-primary);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(67, 56, 202, 0.28);
+    }
+
+    .brand-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--vidia-slate-900);
+      line-height: 1.2;
+    }
+
+    .brand-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--vidia-primary-light);
+      color: var(--vidia-primary);
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.45rem 0.85rem;
+      border-radius: 7px;
+      text-decoration: none;
+      border: 1px solid var(--vidia-slate-200);
+      background-color: #ffffff;
+      color: var(--vidia-slate-700);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-nav:hover {
+      background-color: var(--vidia-slate-50);
+      border-color: var(--vidia-primary);
+      color: var(--vidia-primary);
+    }
+
+    .btn-nav-primary {
+      background-color: var(--vidia-primary);
+      color: #ffffff;
+      border-color: var(--vidia-primary);
+    }
+
+    .btn-nav-primary:hover {
+      background-color: var(--vidia-primary-dark);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(67, 56, 202, 0.25);
+    }
+
+    /* --------------------------------------------------------------------------
+       CONTENEDOR EDITORIAL
+       -------------------------------------------------------------------------- */
+    .main-wrapper {
+      max-width: var(--content-max-width);
+      margin: 2.5rem auto 4.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .document-sheet {
+      background-color: #ffffff;
+      border: 1px solid var(--vidia-slate-200);
+      border-radius: 14px;
+      padding: 3.5rem 3rem;
+      box-shadow: 0 6px 20px -4px rgba(15, 23, 42, 0.05);
+    }
+
+    /* --------------------------------------------------------------------------
+       PORTADA EDITORIAL (HERO)
+       -------------------------------------------------------------------------- */
     .hero-cover {
       text-align: center;
-      padding: 4rem 1.5rem 3.5rem 1.5rem;
+      padding-bottom: 2.5rem;
       border-bottom: 2px solid var(--vidia-slate-200);
-      position: relative;
     }
 
     .hero-tag {
@@ -29,8 +198,8 @@
       font-size: 0.78rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      padding: 6px 14px;
+      letter-spacing: 0.14em;
+      padding: 6px 16px;
       border-radius: 9999px;
       background: var(--vidia-primary-light);
       color: var(--vidia-primary);
@@ -39,8 +208,8 @@
     }
 
     .hero-title {
-      font-family: 'Cinzel', serif;
-      font-size: 2.85rem;
+      font-family: var(--font-cinzel);
+      font-size: 2.75rem;
       font-weight: 800;
       color: var(--vidia-slate-900);
       line-height: 1.15;
@@ -49,7 +218,7 @@
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       font-weight: 600;
       color: var(--vidia-primary);
       margin-bottom: 1.5rem;
@@ -57,26 +226,66 @@
     }
 
     .hero-author {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--vidia-slate-500);
       font-weight: 500;
+      line-height: 1.6;
     }
 
     .hero-author strong {
       color: var(--vidia-slate-800);
     }
 
-    /* Modalidad de Exportación / Selector de Impresión */
+    /* --------------------------------------------------------------------------
+       CITAS Y CAJAS TEXTUALES
+       -------------------------------------------------------------------------- */
+    blockquote.quote-box {
+      margin: 2.25rem 0;
+      padding: 1.25rem 1.6rem;
+      background-color: var(--vidia-slate-50);
+      border-left: 3.5px solid var(--vidia-accent);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--vidia-slate-800);
+      border-radius: 0 8px 8px 0;
+    }
+
+    blockquote.quote-box cite {
+      display: block;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--vidia-slate-500);
+      margin-top: 0.5rem;
+    }
+
+    .sub-heading {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      color: var(--vidia-slate-700);
+      line-height: 1.75;
+    }
+
+    /* --------------------------------------------------------------------------
+       PANEL DE IMPRESIÓN Y DESCARGAS
+       -------------------------------------------------------------------------- */
     .print-panel {
       background: #ffffff;
-      border: 2px solid var(--vidia-primary-light);
+      border: 1.5px solid var(--vidia-primary-light);
       border-radius: 12px;
-      padding: 1.75rem;
+      padding: 1.5rem 1.75rem;
       margin: 2.5rem 0 3.5rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      box-shadow: 0 4px 20px -2px rgba(67, 56, 202, 0.06);
+      box-shadow: 0 4px 18px -2px rgba(67, 56, 202, 0.05);
     }
 
     .print-panel-header {
@@ -84,7 +293,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .print-panel-title {
@@ -144,12 +353,27 @@
       background: var(--vidia-slate-50);
     }
 
-    /* Módulos Cards */
+    /* --------------------------------------------------------------------------
+       SECCIONES Y TARJETAS DE MÓDULOS
+       -------------------------------------------------------------------------- */
+    .section-heading {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1.5px solid var(--vidia-slate-200);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
     .modules-grid {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      margin-top: 1.5rem;
+      margin-top: 1.75rem;
     }
 
     .module-card {
@@ -169,6 +393,29 @@
       box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
     }
 
+    .module-card.preview-highlight {
+      border: 1.5px solid #a5b4fc;
+      background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    }
+
+    /* Cinta UX de Vista Previa / Muestra Gratuita (Oculta en Impresión) */
+    .sample-ribbon {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.73rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--vidia-emerald);
+      background: var(--vidia-emerald-light);
+      border: 1px solid #a7f3d0;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 0.2rem;
+      width: fit-content;
+    }
+
     .module-card-top {
       display: flex;
       flex-wrap: wrap;
@@ -186,7 +433,7 @@
     }
 
     .module-card-title {
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       font-weight: 800;
       color: var(--vidia-slate-900);
       line-height: 1.3;
@@ -195,7 +442,7 @@
     .module-card-desc {
       font-size: 0.95rem;
       color: var(--vidia-slate-600);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .module-card-footer {
@@ -205,7 +452,7 @@
       justify-content: space-between;
       border-top: 1px solid var(--vidia-slate-100);
       padding-top: 1rem;
-      margin-top: 0.5rem;
+      margin-top: 0.35rem;
       gap: 0.75rem;
     }
 
@@ -219,6 +466,19 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+    }
+
+    /* Pastilla temática unificada en violeta Vidia para todos los módulos */
+    .badge-tag {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.02em;
+      background: #ede9fe;
+      color: #6d28d9;
+      border: 1px solid #ddd6fe;
     }
 
     .btn-read {
@@ -260,22 +520,124 @@
       color: var(--vidia-primary);
     }
 
-    /* Modal de Compilación del Libro Completo */
-    #printBookContainer {
+    /* --------------------------------------------------------------------------
+       PIE DE PÁGINA GLOBAL
+       -------------------------------------------------------------------------- */
+    .global-footer {
+      background-color: #ffffff;
+      border-top: 1px solid var(--vidia-slate-200);
+      padding: 2.5rem 1.5rem;
+      color: var(--vidia-slate-500);
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+
+    .footer-container {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--vidia-slate-800);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid var(--vidia-slate-100);
+      padding-top: 1.25rem;
+    }
+
+    .footer-bottom a {
+      color: var(--vidia-primary);
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    .print-footer {
       display: none;
     }
 
-    @media print {
-      .hero-cover {
-        padding: 2rem 0 !important;
-        page-break-after: always;
+    /* --------------------------------------------------------------------------
+       IMPRESIÓN Y PDF (@media print)
+       -------------------------------------------------------------------------- */
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm 20mm 15mm;
+      @bottom-left {
+        content: "Manual Oficial de Numerología Pitagórica • Vidia";
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 8pt;
+        color: #64748b;
       }
-      .print-panel, .card-actions, .global-header, .no-print {
+      @bottom-right {
+        content: "https://vidia-portal.vercel.app/";
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 8pt;
+        color: #4338ca;
+      }
+    }
+
+    @media print {
+      /* Oculta elementos interactivos y comerciales en la impresión */
+      .no-print, 
+      .global-header, 
+      .print-panel, 
+      .card-actions, 
+      .sample-ribbon {
         display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      .main-wrapper {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .document-sheet {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
       }
       .module-card {
         border: 1px solid #cbd5e1 !important;
+        background: #ffffff !important;
         page-break-inside: avoid;
+        box-shadow: none !important;
+      }
+      .hero-cover {
+        padding-top: 0 !important;
+      }
+      .print-footer {
+        display: block !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 1px solid #cbd5e1;
+        padding-top: 5pt;
+        font-size: 8pt;
+        color: #64748b;
       }
     }
   </style>
@@ -327,6 +689,93 @@
         <h1 class="hero-title">MANUAL VIDIA DE NUMEROLOGÍA PITAGÓRICA</h1>
         <p class="hero-subtitle">La Arquitectura Matemática del Ser y la Dinámica de los Ciclos Vitales</p>
         
+        <!-- ILUSTRACIÓN VECTORIAL EMBLEMÁTICA (OPCIÓN 2: RUEDA DE LAS 9 MÓNADAS) -->
+        <div style="max-width: 440px; margin: 2rem auto; user-select: none;">
+          <svg viewBox="0 0 500 460" style="width: 100%; height: auto; filter: drop-shadow(0 4px 12px rgba(67, 56, 202, 0.05));" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g-ring-cover" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4338ca" />
+                <stop offset="100%" stop-color="#059669" />
+              </linearGradient>
+            </defs>
+
+            <!-- ANILLO EXTERIOR DE CALIBRACIÓN -->
+            <circle cx="250" cy="225" r="175" fill="none" stroke="#e2e8f0" stroke-width="2" />
+            <circle cx="250" cy="225" r="155" fill="none" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4 4" />
+            <circle cx="250" cy="225" r="70" fill="none" stroke="#e2e8f0" stroke-width="1.2" />
+
+            <!-- LÍNEAS GEOMÉTRICAS CONECTORAS ENTRE LOS 9 PUNTOS (ENEAGRAMA PITAGÓRICO) -->
+            <polygon points="
+              250,65
+              352,102
+              404,195
+              379,301
+              294,367
+              206,367
+              121,301
+              96,195
+              148,102" 
+              fill="none" stroke="#cbd5e1" stroke-width="1.2" />
+
+            <!-- TRIÁNGULO DE FUERZA INTERNO (3 - 6 - 9 de Jordan) -->
+            <polygon points="250,65 379,301 121,301" fill="none" stroke="#4338ca" stroke-width="2" stroke-linejoin="round" />
+
+            <!-- NODO CENTRAL: EL RETORNO AL UNO -->
+            <circle cx="250" cy="225" r="32" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+            <text x="250" y="221" text-anchor="middle" font-family="'Cinzel', serif" font-weight="900" font-size="14" fill="#0f172a">VIDIA</text>
+            <text x="250" y="235" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#64748b" letter-spacing="1">MÉTODO</text>
+
+            <!-- LOS 9 ARQUETIPOS EN EL PERÍMETRO -->
+            <!-- 1 (Norte) -->
+            <g transform="translate(250, 65)">
+              <circle cx="0" cy="0" r="16" fill="#ffffff" stroke="#4338ca" stroke-width="2" />
+              <text x="0" y="4" text-anchor="middle" font-weight="800" font-size="12" fill="#4338ca">1</text>
+            </g>
+            <!-- 2 -->
+            <g transform="translate(352, 102)">
+              <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="1.8" />
+              <text x="0" y="4" text-anchor="middle" font-weight="700" font-size="11" fill="#0f172a">2</text>
+            </g>
+            <!-- 3 (Vértice Triángulo Maestro) -->
+            <g transform="translate(404, 195)">
+              <circle cx="0" cy="0" r="16" fill="#ffffff" stroke="#7c3aed" stroke-width="2" />
+              <text x="0" y="4" text-anchor="middle" font-weight="800" font-size="12" fill="#7c3aed">3</text>
+            </g>
+            <!-- 4 -->
+            <g transform="translate(379, 301)">
+              <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="1.8" />
+              <text x="0" y="4" text-anchor="middle" font-weight="700" font-size="11" fill="#0f172a">4</text>
+            </g>
+            <!-- 5 -->
+            <g transform="translate(294, 367)">
+              <circle cx="0" cy="0" r="15" fill="#ffffff" stroke="#d97706" stroke-width="2" />
+              <text x="0" y="4" text-anchor="middle" font-weight="800" font-size="11" fill="#d97706">5</text>
+            </g>
+            <!-- 6 (Vértice Triángulo Maestro) -->
+            <g transform="translate(206, 367)">
+              <circle cx="0" cy="0" r="16" fill="#ffffff" stroke="#7c3aed" stroke-width="2" />
+              <text x="0" y="4" text-anchor="middle" font-weight="800" font-size="12" fill="#7c3aed">6</text>
+            </g>
+            <!-- 7 -->
+            <g transform="translate(121, 301)">
+              <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#059669" stroke-width="1.8" />
+              <text x="0" y="4" text-anchor="middle" font-weight="700" font-size="11" fill="#059669">7</text>
+            </g>
+            <!-- 8 -->
+            <g transform="translate(96, 195)">
+              <circle cx="0" cy="0" r="15" fill="#ffffff" stroke="#4338ca" stroke-width="2" />
+              <text x="0" y="4" text-anchor="middle" font-weight="800" font-size="11" fill="#4338ca">8</text>
+            </g>
+            <!-- 9 (Vértice de Cierre) -->
+            <g transform="translate(148, 102)">
+              <circle cx="0" cy="0" r="16" fill="#ffffff" stroke="#059669" stroke-width="2" />
+              <text x="0" y="4" text-anchor="middle" font-weight="800" font-size="12" fill="#059669">9</text>
+            </g>
+
+            <text x="250" y="420" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#94a3b8" letter-spacing="1">SISTEMA CÍCLICO DECIMODÉCIMO</text>
+          </svg>
+        </div>
+
         <p class="hero-author">
           Basado en las investigaciones empíricas del <strong>California Institute of Numerical Research</strong><br>
           (Dra. Juno Jordan & Florence Campbell) &bull; Compilado y estandarizado para la plataforma <strong>Vidia</strong>
@@ -392,7 +841,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO I</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Fundamentos</span>
+              <span class="badge-tag">Fundamentos</span>
             </div>
             <h3 class="module-card-title">Filosofía Pitagórica y la Ciencia de los Números</h3>
             <p class="module-card-desc">
@@ -401,7 +850,7 @@
             <div class="module-card-footer">
               <span class="topics-pill">&bull; La Tetraktys &bull; Historia del California Institute &bull; Resonancia Acústica</span>
               <div class="card-actions no-print">
-                <a href="modulo-1.html" class="btn-read">Leer Módulo &rarr;</a>
+                <a href="modulo-1.html" class="btn-read">Leer Módulo I &rarr;</a>
                 <button onclick="imprimirCapitulo('modulo-1.html')" class="btn-card-print" title="Descargar PDF de este módulo">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
                   <span>PDF</span>
@@ -414,7 +863,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO II</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Onomástica</span>
+              <span class="badge-tag">Onomástica</span>
             </div>
             <h3 class="module-card-title">La Matriz Alfabética y el Valor Acústico del Nombre</h3>
             <p class="module-card-desc">
@@ -423,7 +872,7 @@
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Matriz Decimal &bull; Sonido vs Grafía &bull; Nombre Legal de Nacimiento</span>
               <div class="card-actions no-print">
-                <a href="modulo-2.html" class="btn-read">Leer Módulo &rarr;</a>
+                <a href="modulo-2.html" class="btn-read">Leer Módulo II &rarr;</a>
                 <button onclick="imprimirCapitulo('modulo-2.html')" class="btn-card-print" title="Descargar PDF de este módulo">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
                   <span>PDF</span>
@@ -436,7 +885,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO III</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Arquetipos</span>
+              <span class="badge-tag">Arquetipos</span>
             </div>
             <h3 class="module-card-title">Los 9 Arquetipos Primordiales y su Psicología de Sombra</h3>
             <p class="module-card-desc">
@@ -445,7 +894,7 @@
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Del 1 (Iniciador) al 9 (Humanitario) &bull; Luz y Sombra &bull; Compatibilidad</span>
               <div class="card-actions no-print">
-                <a href="modulo-3.html" class="btn-read">Leer Módulo &rarr;</a>
+                <a href="modulo-3.html" class="btn-read">Leer Módulo III &rarr;</a>
                 <button onclick="imprimirCapitulo('modulo-3.html')" class="btn-card-print" title="Descargar PDF de este módulo">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
                   <span>PDF</span>
@@ -458,7 +907,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO IV</span>
-              <span class="badge-tag badge-karmic">Alto Voltaje</span>
+              <span class="badge-tag">Frecuencias Maestras</span>
             </div>
             <h3 class="module-card-title">Números Maestros y Deudas Kármicas</h3>
             <p class="module-card-desc">
@@ -467,7 +916,7 @@
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Frecuencia Maestra &bull; Las 4 Deudas Kármicas &bull; Transformación Consciente</span>
               <div class="card-actions no-print">
-                <a href="modulo-4.html" class="btn-read">Leer Módulo &rarr;</a>
+                <a href="modulo-4.html" class="btn-read">Leer Módulo IV &rarr;</a>
                 <button onclick="imprimirCapitulo('modulo-4.html')" class="btn-card-print" title="Descargar PDF de este módulo">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
                   <span>PDF</span>
@@ -476,11 +925,11 @@
             </div>
           </div>
 
-          <!-- MÓDULO V (ACTUAL) -->
-          <div class="module-card" style="border: 2px solid var(--vidia-primary); box-shadow: 0 4px 16px rgba(67, 56, 202, 0.08);">
+          <!-- MÓDULO V (NÚCLEO PRÁCTICO) -->
+          <div class="module-card">
             <div class="module-card-top">
-              <span class="module-card-num">MÓDULO V &bull; GUÍA CENTRAL</span>
-              <span class="badge-tag badge-master">Disponible para Lectura</span>
+              <span class="module-card-num">MÓDULO V</span>
+              <span class="badge-tag">Método de Cálculo</span>
             </div>
             <h3 class="module-card-title">Guía Práctica de Cálculo e Interpretación</h3>
             <p class="module-card-desc">
@@ -489,8 +938,7 @@
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Protocolo Maestro de Reducción &bull; Ficha Técnica Oficial &bull; Triángulo de Fuerza</span>
               <div class="card-actions no-print">
-                <a href="modulo-5.html" class="btn-read" style="background: var(--vidia-primary);">Leer Módulo V &rarr;</a>
-                <a href="modulo-5.html#punto-1" class="btn-card-print" title="Ver diagramas vectoriales">Diagramas</a>
+                <a href="modulo-5.html" class="btn-read">Ver Módulo V &rarr;</a>
                 <button onclick="imprimirCapitulo('modulo-5.html')" class="btn-card-print" title="Descargar PDF de este módulo">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
                   <span>PDF</span>
@@ -503,7 +951,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO VI</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Clínica Profesional</span>
+              <span class="badge-tag">Clínica Profesional</span>
             </div>
             <h3 class="module-card-title">La Devolución Terapéutica y el Código Ético</h3>
             <p class="module-card-desc">
@@ -512,7 +960,7 @@
             <div class="module-card-footer">
               <span class="topics-pill">&bull; La Sesión de Devolución &bull; Código Ético Vidia &bull; Plantillas Clínicas</span>
               <div class="card-actions no-print">
-                <a href="modulo-6.html" class="btn-read">Leer Módulo &rarr;</a>
+                <a href="modulo-6.html" class="btn-read">Leer Módulo VI &rarr;</a>
                 <button onclick="imprimirCapitulo('modulo-6.html')" class="btn-card-print" title="Descargar PDF de este módulo">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
                   <span>PDF</span>
@@ -570,9 +1018,8 @@
 
     // Función para compaginar e imprimir el libro completo
     function imprimirLibroCompleto() {
-      // Abre el capítulo consolidado o lanza la impresión del documento
       const frame = document.getElementById('printFrame');
-      frame.src = 'modulo-5.html'; // Por el momento compagina sobre el módulo central oficial
+      frame.src = 'modulo-5.html';
       frame.onload = function() {
         frame.contentWindow.focus();
         frame.contentWindow.print();
