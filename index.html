@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidia • Manual Oficial de Numerología Pitagórica Integral</title>
+  
+  <!-- Tipografías de alta legibilidad editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de estilos compartida con el ebook -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Estilos específicos de la portada e índice general */
+    .hero-cover {
+      text-align: center;
+      padding: 4rem 1.5rem 3.5rem 1.5rem;
+      border-bottom: 2px solid var(--vidia-slate-200);
+      position: relative;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: var(--vidia-primary-light);
+      color: var(--vidia-primary);
+      border: 1px solid #c7d2fe;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.85rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--vidia-primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .hero-author {
+      font-size: 0.95rem;
+      color: var(--vidia-slate-500);
+      font-weight: 500;
+    }
+
+    .hero-author strong {
+      color: var(--vidia-slate-800);
+    }
+
+    /* Modalidad de Exportación / Selector de Impresión */
+    .print-panel {
+      background: #ffffff;
+      border: 2px solid var(--vidia-primary-light);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin: 2.5rem 0 3.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      box-shadow: 0 4px 20px -2px rgba(67, 56, 202, 0.06);
+    }
+
+    .print-panel-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .print-panel-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .print-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-print-full {
+      background: var(--vidia-primary);
+      color: #ffffff;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .btn-print-full:hover {
+      background: var(--vidia-primary-dark);
+      box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .btn-print-outline {
+      background: #ffffff;
+      color: var(--vidia-slate-700);
+      border: 1px solid var(--vidia-slate-300);
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s;
+    }
+
+    .btn-print-outline:hover {
+      border-color: var(--vidia-primary);
+      color: var(--vidia-primary);
+      background: var(--vidia-slate-50);
+    }
+
+    /* Módulos Cards */
+    .modules-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .module-card {
+      background: #ffffff;
+      border: 1px solid var(--vidia-slate-200);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      position: relative;
+    }
+
+    .module-card:hover {
+      border-color: var(--vidia-primary);
+      box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
+    }
+
+    .module-card-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .module-card-num {
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: var(--vidia-primary);
+      letter-spacing: 0.08em;
+    }
+
+    .module-card-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      line-height: 1.3;
+    }
+
+    .module-card-desc {
+      font-size: 0.95rem;
+      color: var(--vidia-slate-600);
+      line-height: 1.6;
+    }
+
+    .module-card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--vidia-slate-100);
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+      gap: 0.75rem;
+    }
+
+    .topics-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--vidia-slate-500);
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-read {
+      padding: 0.45rem 0.95rem;
+      border-radius: 6px;
+      background: var(--vidia-primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: background 0.15s;
+    }
+
+    .btn-read:hover {
+      background: var(--vidia-primary-dark);
+    }
+
+    .btn-card-print {
+      padding: 0.45rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--vidia-slate-200);
+      background: #ffffff;
+      color: var(--vidia-slate-600);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-card-print:hover {
+      border-color: var(--vidia-primary);
+      color: var(--vidia-primary);
+    }
+
+    /* Modal de Compilación del Libro Completo */
+    #printBookContainer {
+      display: none;
+    }
+
+    @media print {
+      .hero-cover {
+        padding: 2rem 0 !important;
+        page-break-after: always;
+      }
+      .print-panel, .card-actions, .global-header, .no-print {
+        display: none !important;
+      }
+      .module-card {
+        border: 1px solid #cbd5e1 !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================================
+       CABECERA DE NAVEGACIÓN GLOBAL
+       ====================================================================== -->
+  <header class="global-header no-print">
+    <div class="header-container">
+      <a href="https://vidia-portal.vercel.app/" class="brand-wrapper" title="Portal Principal Vidia">
+        <div class="brand-icon">V</div>
+        <div>
+          <div class="brand-title">Vidia Numerología</div>
+          <span class="brand-badge">Manual del Estudiante</span>
+        </div>
+      </a>
+
+      <!-- Navegación y Acciones -->
+      <nav class="nav-buttons" aria-label="Navegación general">
+        <a href="https://vidia-portal.vercel.app/" class="btn-nav" title="Ir al Portal y Calculadoras">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Ir a la App Web</span>
+        </a>
+
+        <a href="#indice-general" class="btn-nav" title="Ver el índice de módulos">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          <span>Índice</span>
+        </a>
+
+        <button onclick="imprimirLibroCompleto()" class="btn-nav btn-nav-primary" title="Imprimir libro completo bien compaginado">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Imprimir Libro Completo</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL
+       ====================================================================== -->
+  <main class="main-wrapper">
+    <article class="document-sheet">
+
+      <!-- PORTADA EDITORIAL IMPACTANTE -->
+      <header class="hero-cover">
+        <span class="hero-tag">Manual Oficial Teórico y Metodológico</span>
+        <h1 class="hero-title">MANUAL VIDIA DE NUMEROLOGÍA PITAGÓRICA</h1>
+        <p class="hero-subtitle">La Arquitectura Matemática del Ser y la Dinámica de los Ciclos Vitales</p>
+        
+        <p class="hero-author">
+          Basado en las investigaciones empíricas del <strong>California Institute of Numerical Research</strong><br>
+          (Dra. Juno Jordan & Florence Campbell) &bull; Compilado y estandarizado para la plataforma <strong>Vidia</strong>
+        </p>
+      </header>
+
+      <!-- INTRODUCCIÓN EDITORIAL IMPACTANTE -->
+      <section style="margin: 3rem 0 2.5rem 0;">
+        <blockquote class="quote-box" style="margin: 0 0 2rem 0;">
+          «Los números no son símbolos mudos ni meras cantidades aritméticas; son condensadores de frecuencias vibratorias y acordes biográficos que organizan el despliegue del alma humana en el tiempo».
+          <cite>— Sarah Joanna Dennis (L. Dow Balliett)</cite>
+        </blockquote>
+
+        <h2 class="sub-heading" style="font-size: 1.35rem; margin-top: 0;">El Mapa no es el Destino; es la Partitura</h2>
+        <p>
+          Bienvenido al <strong>Manual Vidia de Numerología Pitagórica Integral</strong>. Este compendio ha sido diseñado no como un oráculo determinista de predicciones mecánicas, sino como una <em>guía técnica de alta precisión biométrica</em>. Siguiendo la rigurosa tradición clínica desarrollada durante más de cuatro décadas en California por la Dra. Juno Jordan, cada número obtenido en una carta natal representa una fuerza funcional verificable en la conducta, los bloqueos inconscientes y las oportunidades temporales del individuo.
+        </p>
+        <p>
+          Tanto si abordas este manual para afinar tu autoconocimiento como si buscas profesionalizar tu consulta clínica, encontrarás un método científico estandarizado: reglas no arbitrarias para la reducción teosófica, discernimiento acústico exacto del alfabeto hispano y un modelo de integración en cuatro cuadrantes que unifica la psicología profunda con la aritmética del tiempo.
+        </p>
+      </section>
+
+      <!-- PANEL DE CONTROL DE IMPRESIÓN Y DESCARGAS -->
+      <section class="print-panel no-print">
+        <div class="print-panel-header">
+          <div>
+            <div class="print-panel-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vidia-primary)" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              <span>Centro de Impresión y Descarga en PDF</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--vidia-slate-500); margin: 0.25rem 0 0 0;">
+              Elige si deseas exportar el manual en su totalidad o descargar capítulos individuales sin gastar tinta innecesaria.
+            </p>
+          </div>
+
+          <div class="print-actions">
+            <button onclick="window.print()" class="btn-print-outline" title="Imprimir solo la portada e índice">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Imprimir este Índice</span>
+            </button>
+            <button onclick="imprimirLibroCompleto()" class="btn-print-full" title="Generar versión completa de todo el libro">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              <span>Imprimir Libro Completo (PDF)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           ÍNDICE GENERAL DEL MANUAL (MÓDULOS I A VI)
+           ================================================================== -->
+      <section id="indice-general">
+        <h2 class="section-heading">
+          <span>Índice General de Contenidos</span>
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--vidia-slate-600); margin-bottom: 2rem;">
+          Explora los módulos estructurados de la formación. Puedes acceder a la lectura interactiva o imprimir directamente cada tema:
+        </p>
+
+        <div class="modules-grid">
+
+          <!-- MÓDULO I -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <span class="module-card-num">MÓDULO I</span>
+              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Fundamentos</span>
+            </div>
+            <h3 class="module-card-title">Filosofía Pitagórica y la Ciencia de los Números</h3>
+            <p class="module-card-desc">
+              El principio de la mónada y la escala decimal primordial. Cómo la vibración numérica estructura los arquetipos psicológicos y la visión histórica de Juno Jordan frente a la tradición esotérica antigua.
+            </p>
+            <div class="module-card-footer">
+              <span class="topics-pill">&bull; La Tetraktys &bull; Historia del California Institute &bull; Resonancia Acústica</span>
+              <div class="card-actions no-print">
+                <a href="modulo-1.html" class="btn-read">Leer Módulo &rarr;</a>
+                <button onclick="imprimirCapitulo('modulo-1.html')" class="btn-card-print" title="Descargar PDF de este módulo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>PDF</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MÓDULO II -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <span class="module-card-num">MÓDULO II</span>
+              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Onomástica</span>
+            </div>
+            <h3 class="module-card-title">La Matriz Alfabética y el Valor Acústico del Nombre</h3>
+            <p class="module-card-desc">
+              Desglose fonético de las 9 columnas pitagóricas. Criterios rigurosos para la lengua española: acentos ortográficos, tratamiento de la "Ñ", la "H" muda, dígrafos (CH, LL, RR) y el camaleón fonético de la letra "Y".
+            </p>
+            <div class="module-card-footer">
+              <span class="topics-pill">&bull; Matriz Decimal &bull; Sonido vs Grafía &bull; Nombre Legal de Nacimiento</span>
+              <div class="card-actions no-print">
+                <a href="modulo-2.html" class="btn-read">Leer Módulo &rarr;</a>
+                <button onclick="imprimirCapitulo('modulo-2.html')" class="btn-card-print" title="Descargar PDF de este módulo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>PDF</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MÓDULO III -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <span class="module-card-num">MÓDULO III</span>
+              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Arquetipos</span>
+            </div>
+            <h3 class="module-card-title">Los 9 Arquetipos Primordiales y su Psicología de Sombra</h3>
+            <p class="module-card-desc">
+              Análisis exhaustivo del 1 al 9: la polaridad constructiva, el exceso y la carencia de cada cifra. Cómo opera cada energía en el temperamento, la vocación profesional y los vínculos afectivos.
+            </p>
+            <div class="module-card-footer">
+              <span class="topics-pill">&bull; Del 1 (Iniciador) al 9 (Humanitario) &bull; Luz y Sombra &bull; Compatibilidad</span>
+              <div class="card-actions no-print">
+                <a href="modulo-3.html" class="btn-read">Leer Módulo &rarr;</a>
+                <button onclick="imprimirCapitulo('modulo-3.html')" class="btn-card-print" title="Descargar PDF de este módulo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>PDF</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MÓDULO IV -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <span class="module-card-num">MÓDULO IV</span>
+              <span class="badge-tag badge-karmic">Alto Voltaje</span>
+            </div>
+            <h3 class="module-card-title">Números Maestros y Deudas Kármicas</h3>
+            <p class="module-card-desc">
+              El compromiso espiritual del 11, 22 y 33 frente al entrenamiento evolutivo de las cuatro Deudas Kármicas (13/4, 14/5, 16/7 y 19/1). Cómo diagnosticar la tensión interna que experimenta el consultante sin caer en fatalismos.
+            </p>
+            <div class="module-card-footer">
+              <span class="topics-pill">&bull; Frecuencia Maestra &bull; Las 4 Deudas Kármicas &bull; Transformación Consciente</span>
+              <div class="card-actions no-print">
+                <a href="modulo-4.html" class="btn-read">Leer Módulo &rarr;</a>
+                <button onclick="imprimirCapitulo('modulo-4.html')" class="btn-card-print" title="Descargar PDF de este módulo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>PDF</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MÓDULO V (ACTUAL) -->
+          <div class="module-card" style="border: 2px solid var(--vidia-primary); box-shadow: 0 4px 16px rgba(67, 56, 202, 0.08);">
+            <div class="module-card-top">
+              <span class="module-card-num">MÓDULO V &bull; GUÍA CENTRAL</span>
+              <span class="badge-tag badge-master">Disponible para Lectura</span>
+            </div>
+            <h3 class="module-card-title">Guía Práctica de Cálculo e Interpretación</h3>
+            <p class="module-card-desc">
+              La arquitectura matemática de la carta completa: algoritmo de reducción teosófica de 2 fases, diagrama de flujo, las 3 coordenadas natales, el cálculo del Año Personal con el Efecto Marea de Juno Jordan y el caso testigo oficial resuelto paso a paso.
+            </p>
+            <div class="module-card-footer">
+              <span class="topics-pill">&bull; Protocolo Maestro de Reducción &bull; Ficha Técnica Oficial &bull; Triángulo de Fuerza</span>
+              <div class="card-actions no-print">
+                <a href="modulo-5.html" class="btn-read" style="background: var(--vidia-primary);">Leer Módulo V &rarr;</a>
+                <a href="modulo-5.html#punto-1" class="btn-card-print" title="Ver diagramas vectoriales">Diagramas</a>
+                <button onclick="imprimirCapitulo('modulo-5.html')" class="btn-card-print" title="Descargar PDF de este módulo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>PDF</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MÓDULO VI -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <span class="module-card-num">MÓDULO VI</span>
+              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Clínica Profesional</span>
+            </div>
+            <h3 class="module-card-title">La Devolución Terapéutica y el Código Ético</h3>
+            <p class="module-card-desc">
+              Cómo conducir una sesión de numerología profesional sin generar sugestión o codependencia. El protocolo de devolución en 3 frases diagnósticas, sinastría de compatibilidad de pareja y encuadre ético de Vidia.
+            </p>
+            <div class="module-card-footer">
+              <span class="topics-pill">&bull; La Sesión de Devolución &bull; Código Ético Vidia &bull; Plantillas Clínicas</span>
+              <div class="card-actions no-print">
+                <a href="modulo-6.html" class="btn-read">Leer Módulo &rarr;</a>
+                <button onclick="imprimirCapitulo('modulo-6.html')" class="btn-card-print" title="Descargar PDF de este módulo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>PDF</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ======================================================================
+       PIE DE PÁGINA EDITORIAL GLOBAL
+       ====================================================================== -->
+  <footer class="global-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">Sistema Vidia • Formación Profesional en Numerología Pitagórica</div>
+        <div class="footer-meta">Manual Oficial del Estudiante • Edición 2026</div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          Plataforma de estudio y calculadoras oficiales: 
+          <a href="https://vidia-portal.vercel.app/" target="_blank" rel="noopener"><strong>https://vidia-portal.vercel.app/</strong></a>
+        </div>
+        <div class="footer-links no-print">
+          <a href="#indice-general">Volver al Índice &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pie de página visible al imprimir en PDF -->
+  <div class="print-footer">
+    <span>Manual Oficial de Numerología Pitagórica • Sistema Vidia</span> &bull; 
+    <span>Portal Oficial: https://vidia-portal.vercel.app/</span>
+  </div>
+
+  <!-- Iframe oculto para compaginar o imprimir capítulos individuales sin salir del índice -->
+  <iframe id="printFrame" style="display:none; width:0; height:0; border:0;"></iframe>
+
+  <script>
+    // Función para imprimir un capítulo específico directamente desde el índice
+    function imprimirCapitulo(url) {
+      const frame = document.getElementById('printFrame');
+      frame.src = url;
+      frame.onload = function() {
+        frame.contentWindow.focus();
+        frame.contentWindow.print();
+      };
+    }
+
+    // Función para compaginar e imprimir el libro completo
+    function imprimirLibroCompleto() {
+      // Abre el capítulo consolidado o lanza la impresión del documento
+      const frame = document.getElementById('printFrame');
+      frame.src = 'modulo-5.html'; // Por el momento compagina sobre el módulo central oficial
+      frame.onload = function() {
+        frame.contentWindow.focus();
+        frame.contentWindow.print();
+      };
+    }
+  </script>
+</body>
+</html>
