@@ -10,275 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Hoja de estilos compartida con el ebook -->
+  <!-- Hoja de estilos centralizada -->
   <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* Estilos específicos de la portada e índice general */
-    .hero-cover {
-      text-align: center;
-      padding: 4rem 1.5rem 3.5rem 1.5rem;
-      border-bottom: 2px solid var(--vidia-slate-200);
-      position: relative;
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      background: var(--vidia-primary-light);
-      color: var(--vidia-primary);
-      border: 1px solid #c7d2fe;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title {
-      font-family: 'Cinzel', serif;
-      font-size: 2.85rem;
-      font-weight: 800;
-      color: var(--vidia-slate-900);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.85rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--vidia-primary);
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
-    }
-
-    .hero-author {
-      font-size: 0.95rem;
-      color: var(--vidia-slate-500);
-      font-weight: 500;
-    }
-
-    .hero-author strong {
-      color: var(--vidia-slate-800);
-    }
-
-    /* Modalidad de Exportación / Selector de Impresión */
-    .print-panel {
-      background: #ffffff;
-      border: 2px solid var(--vidia-primary-light);
-      border-radius: 12px;
-      padding: 1.75rem;
-      margin: 2.5rem 0 3.5rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      box-shadow: 0 4px 20px -2px rgba(67, 56, 202, 0.06);
-    }
-
-    .print-panel-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .print-panel-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--vidia-slate-900);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .print-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .btn-print-full {
-      background: var(--vidia-primary);
-      color: #ffffff;
-      padding: 0.65rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.2s;
-    }
-
-    .btn-print-full:hover {
-      background: var(--vidia-primary-dark);
-      box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
-      transform: translateY(-1px);
-    }
-
-    .btn-print-outline {
-      background: #ffffff;
-      color: var(--vidia-slate-700);
-      border: 1px solid var(--vidia-slate-300);
-      padding: 0.65rem 1rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      transition: all 0.2s;
-    }
-
-    .btn-print-outline:hover {
-      border-color: var(--vidia-primary);
-      color: var(--vidia-primary);
-      background: var(--vidia-slate-50);
-    }
-
-    /* Módulos Cards */
-    .modules-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .module-card {
-      background: #ffffff;
-      border: 1px solid var(--vidia-slate-200);
-      border-radius: 12px;
-      padding: 1.75rem 2rem;
-      transition: all 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      position: relative;
-    }
-
-    .module-card:hover {
-      border-color: var(--vidia-primary);
-      box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
-    }
-
-    .module-card-top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-
-    .module-card-num {
-      font-family: var(--font-mono);
-      font-weight: 800;
-      font-size: 0.82rem;
-      color: var(--vidia-primary);
-      letter-spacing: 0.08em;
-    }
-
-    .module-card-title {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--vidia-slate-900);
-      line-height: 1.3;
-    }
-
-    .module-card-desc {
-      font-size: 0.95rem;
-      color: var(--vidia-slate-600);
-      line-height: 1.6;
-    }
-
-    .module-card-footer {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid var(--vidia-slate-100);
-      padding-top: 1rem;
-      margin-top: 0.5rem;
-      gap: 0.75rem;
-    }
-
-    .topics-pill {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--vidia-slate-500);
-    }
-
-    .card-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn-read {
-      padding: 0.45rem 0.95rem;
-      border-radius: 6px;
-      background: var(--vidia-primary);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.82rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      transition: background 0.15s;
-    }
-
-    .btn-read:hover {
-      background: var(--vidia-primary-dark);
-    }
-
-    .btn-card-print {
-      padding: 0.45rem 0.85rem;
-      border-radius: 6px;
-      border: 1px solid var(--vidia-slate-200);
-      background: #ffffff;
-      color: var(--vidia-slate-600);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.82rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .btn-card-print:hover {
-      border-color: var(--vidia-primary);
-      color: var(--vidia-primary);
-    }
-
-    /* Modal de Compilación del Libro Completo */
-    #printBookContainer {
-      display: none;
-    }
-
-    @media print {
-      .hero-cover {
-        padding: 2rem 0 !important;
-        page-break-after: always;
-      }
-      .print-panel, .card-actions, .global-header, .no-print {
-        display: none !important;
-      }
-      .module-card {
-        border: 1px solid #cbd5e1 !important;
-        page-break-inside: avoid;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -326,7 +59,94 @@
         <span class="hero-tag">Manual Oficial Teórico y Metodológico</span>
         <h1 class="hero-title">MANUAL VIDIA DE NUMEROLOGÍA PITAGÓRICA</h1>
         <p class="hero-subtitle">La Arquitectura Matemática del Ser y la Dinámica de los Ciclos Vitales</p>
-        
+        <!-- ILUSTRACIÓN VECTORIAL: LA RUEDA DE LAS 9 MÓNADAS Y TRIÁNGULO DE FUERZA -->
+        <div class="hero-artwork" style="margin: 2rem auto 2.5rem auto; max-width: 320px; display: flex; justify-content: center;">
+          <svg viewBox="0 0 340 340" class="w-full h-auto select-none" style="filter: drop-shadow(0 10px 25px rgba(67, 56, 202, 0.08));" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="circGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4338ca" stop-opacity="0.15" />
+                <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.05" />
+              </linearGradient>
+            </defs>
+
+            <!-- Círculos concéntricos de resonancia -->
+            <circle cx="170" cy="170" r="145" fill="none" stroke="#e2e8f0" stroke-width="1.5" />
+            <circle cx="170" cy="170" r="135" fill="url(#circGrad)" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4 4" />
+            <circle cx="170" cy="170" r="95" fill="none" stroke="#e2e8f0" stroke-width="1" />
+            
+            <!-- Ejes de alineación decimal -->
+            <line x1="170" y1="25" x2="170" y2="315" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 3" />
+            <line x1="25" y1="170" x2="315" y2="170" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 3" />
+
+            <!-- Triángulo de Fuerza Pitagórico (3 - 6 - 9) -->
+            <!-- 9: (170, 35), 3: (286.9, 237.5), 6: (53.1, 237.5) -->
+            <polygon points="170,40 282,235 58,235" fill="none" stroke="#4338ca" stroke-width="2" stroke-linejoin="round" />
+
+            <!-- Núcleo central Vidia -->
+            <circle cx="170" cy="170" r="42" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+            <circle cx="170" cy="170" r="36" fill="none" stroke="#e2e8f0" stroke-width="1" />
+            <text x="170" y="166" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#0f172a" letter-spacing="1">VIDIA</text>
+            <text x="170" y="179" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="8" fill="#64748b" letter-spacing="1.5">MÉTODO</text>
+
+            <!-- 9 Nodos de las Mónadas (Ángulos = -90 + i*40 deg, r=135) -->
+            <!-- Nodo 1 (0 / Arriba): (170, 35) -->
+            <g transform="translate(170, 35)">
+              <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#4338ca" stroke-width="1.8" />
+              <text x="0" y="4.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="#4338ca">1</text>
+            </g>
+
+            <!-- Nodo 2 (+40 deg): cx=170 + 135*sin(40)=256.8, cy=170 - 135*cos(40)=66.6 -->
+            <g transform="translate(257, 67)">
+              <circle cx="0" cy="0" r="13" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
+              <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#0f172a">2</text>
+            </g>
+
+            <!-- Nodo 3 (+80 deg): cx=170 + 135*sin(80)=303.0, cy=170 - 135*cos(80)=146.6 -->
+            <g transform="translate(303, 147)">
+              <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" />
+              <text x="0" y="4.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="#7c3aed">3</text>
+            </g>
+
+            <!-- Nodo 4 (+120 deg): cx=170 + 135*sin(120)=286.9, cy=170 - 135*cos(120)=237.5 -->
+            <g transform="translate(287, 238)">
+              <circle cx="0" cy="0" r="13" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
+              <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#0f172a">4</text>
+            </g>
+
+            <!-- Nodo 5 (+160 deg): cx=170 + 135*sin(160)=216.2, cy=170 - 135*cos(160)=296.9 -->
+            <g transform="translate(216, 297)">
+              <circle cx="0" cy="0" r="13" fill="#ffffff" stroke="#d97706" stroke-width="1.5" />
+              <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#d97706">5</text>
+            </g>
+
+            <!-- Nodo 6 (+200 deg): cx=170 + 135*sin(200)=123.8, cy=170 - 135*cos(200)=296.9 -->
+            <g transform="translate(124, 297)">
+              <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" />
+              <text x="0" y="4.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="#7c3aed">6</text>
+            </g>
+
+            <!-- Nodo 7 (+240 deg): cx=170 + 135*sin(240)=53.1, cy=170 - 135*cos(240)=237.5 -->
+            <g transform="translate(53, 238)">
+              <circle cx="0" cy="0" r="13" fill="#ffffff" stroke="#059669" stroke-width="1.5" />
+              <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#059669">7</text>
+            </g>
+
+            <!-- Nodo 8 (+280 deg): cx=170 + 135*sin(280)=37.0, cy=170 - 135*cos(280)=146.6 -->
+            <g transform="translate(37, 147)">
+              <circle cx="0" cy="0" r="13" fill="#ffffff" stroke="#4338ca" stroke-width="1.5" />
+              <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#4338ca">8</text>
+            </g>
+
+            <!-- Nodo 9 (+320 deg): cx=170 + 135*sin(320)=83.2, cy=170 - 135*cos(320)=66.6 -->
+            <g transform="translate(83, 67)">
+              <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#059669" stroke-width="1.8" />
+              <text x="0" y="4.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="#059669">9</text>
+            </g>
+
+            <!-- Leyenda técnica al pie -->
+            <text x="170" y="334" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8.5" fill="#64748b" letter-spacing="1">SISTEMA CÍCLICO DECIMODÉCIMO</text>
+          </svg>
+        </div>
         <p class="hero-author">
           Basado en las investigaciones empíricas del <strong>California Institute of Numerical Research</strong><br>
           (Dra. Juno Jordan & Florence Campbell) &bull; Compilado y estandarizado para la plataforma <strong>Vidia</strong>
@@ -392,7 +212,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO I</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Fundamentos</span>
+              <span class="badge-tag">Fundamentos</span>
             </div>
             <h3 class="module-card-title">Filosofía Pitagórica y la Ciencia de los Números</h3>
             <p class="module-card-desc">
@@ -414,7 +234,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO II</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Onomástica</span>
+              <span class="badge-tag">Onomástica</span>
             </div>
             <h3 class="module-card-title">La Matriz Alfabética y el Valor Acústico del Nombre</h3>
             <p class="module-card-desc">
@@ -436,7 +256,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO III</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Arquetipos</span>
+              <span class="badge-tag">Arquetipos</span>
             </div>
             <h3 class="module-card-title">Los 9 Arquetipos Primordiales y su Psicología de Sombra</h3>
             <p class="module-card-desc">
@@ -458,7 +278,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO IV</span>
-              <span class="badge-tag badge-karmic">Alto Voltaje</span>
+              <span class="badge-tag">Frecuencias Maestras</span>
             </div>
             <h3 class="module-card-title">Números Maestros y Deudas Kármicas</h3>
             <p class="module-card-desc">
@@ -476,11 +296,11 @@
             </div>
           </div>
 
-          <!-- MÓDULO V (ACTUAL) -->
+          <!-- MÓDULO V -->
           <div class="module-card" style="border: 2px solid var(--vidia-primary); box-shadow: 0 4px 16px rgba(67, 56, 202, 0.08);">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO V &bull; GUÍA CENTRAL</span>
-              <span class="badge-tag badge-master">Disponible para Lectura</span>
+              <span class="badge-tag">Método de Cálculo</span>
             </div>
             <h3 class="module-card-title">Guía Práctica de Cálculo e Interpretación</h3>
             <p class="module-card-desc">
@@ -503,7 +323,7 @@
           <div class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO VI</span>
-              <span class="badge-tag" style="background:#f1f5f9; color:#475569;">Clínica Profesional</span>
+              <span class="badge-tag">Clínica Profesional</span>
             </div>
             <h3 class="module-card-title">La Devolución Terapéutica y el Código Ético</h3>
             <p class="module-card-desc">
@@ -570,9 +390,8 @@
 
     // Función para compaginar e imprimir el libro completo
     function imprimirLibroCompleto() {
-      // Abre el capítulo consolidado o lanza la impresión del documento
       const frame = document.getElementById('printFrame');
-      frame.src = 'modulo-5.html'; // Por el momento compagina sobre el módulo central oficial
+      frame.src = 'modulo-5.html';
       frame.onload = function() {
         frame.contentWindow.focus();
         frame.contentWindow.print();
