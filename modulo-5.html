@@ -52,7 +52,7 @@
        ====================================================================== -->
   <header class="global-header no-print">
     <div class="header-container">
-    <a href="index.html" class="brand-wrapper" title="Volver al índice">
+      <a href="index.html" class="brand-wrapper" title="Volver a la portada e índice">
         <div class="brand-icon">V</div>
         <div>
           <div class="brand-title">Vidia Numerología</div>
@@ -67,10 +67,10 @@
           <span>Cap. Anterior (Módulo IV)</span>
         </a>
 
-       <a href="index.html" class="btn-nav" title="Volver al índice del manual">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-  <span>Índice</span>
-</a>
+        <a href="index.html" class="btn-nav" title="Volver al índice del manual">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Índice del Curso</span>
+        </a>
 
         <a href="https://vidia-portal.vercel.app/modulos/modulo-6.html" class="btn-nav" title="Ir al capítulo siguiente">
           <span>Cap. Siguiente (Módulo VI)</span>
@@ -1004,54 +1004,62 @@
         </div>
 
         <!-- TABLA 4: MATRIZ ALFABÉTICA PITAGÓRICA UNIVERSAL -->
-        <div class="table-wrapper">
-          <div class="table-caption">Tabla 4: Matriz Alfabética Pitagórica Universal</div>
-          <table class="content-table" style="text-align: center;">
+        <div class="table-wrapper" id="tablaMatrizAlfabetica">
+          <div class="table-caption-flex">
+            <span style="font-size: 0.88rem; font-weight: 700; color: var(--vidia-primary-dark);">
+              Tabla 4: Matriz Alfabética Pitagórica Universal (Ficha de Consulta Rápida)
+            </span>
+            <button onclick="descargarTablaMatrizPDF()" class="btn-table-print no-print" title="Descargar únicamente esta tabla como ficha en PDF">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              <span>Descargar Ficha en PDF</span>
+            </button>
+          </div>
+          <table class="content-table table-matrix-alphabet">
             <thead>
               <tr>
-                <th style="text-align:center;">1</th>
-                <th style="text-align:center;">2</th>
-                <th style="text-align:center;">3</th>
-                <th style="text-align:center;">4</th>
-                <th style="text-align:center;">5</th>
-                <th style="text-align:center;">6</th>
-                <th style="text-align:center;">7</th>
-                <th style="text-align:center;">8</th>
-                <th style="text-align:center;">9</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>A, Á</strong></td>
-                <td><strong>B</strong></td>
-                <td><strong>C</strong></td>
-                <td><strong>D</strong></td>
-                <td><strong>E, É</strong></td>
-                <td><strong>F</strong></td>
-                <td><strong>G</strong></td>
-                <td><strong>H</strong></td>
-                <td><strong>I, Í</strong></td>
+                <td>A, Á</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+                <td>E, É</td>
+                <td>F</td>
+                <td>G</td>
+                <td>H</td>
+                <td>I, Í</td>
               </tr>
               <tr>
-                <td><strong>J</strong></td>
-                <td><strong>K</strong></td>
-                <td><strong>L</strong></td>
-                <td><strong>M</strong></td>
-                <td><strong>N, Ñ</strong></td>
-                <td><strong>O, Ó</strong></td>
-                <td><strong>P</strong></td>
-                <td><strong>Q</strong></td>
-                <td><strong>R</strong></td>
+                <td>J</td>
+                <td>K</td>
+                <td>L</td>
+                <td>M</td>
+                <td>N, Ñ</td>
+                <td>O, Ó</td>
+                <td>P</td>
+                <td>Q</td>
+                <td>R</td>
               </tr>
               <tr>
-                <td><strong>S</strong></td>
-                <td><strong>T</strong></td>
-                <td><strong>U, Ú, Ü</strong></td>
-                <td><strong>V</strong></td>
-                <td><strong>W</strong></td>
-                <td><strong>X</strong></td>
-                <td><strong>Y</strong></td>
-                <td><strong>Z</strong></td>
+                <td>S</td>
+                <td>T</td>
+                <td>U, Ú, Ü</td>
+                <td>V</td>
+                <td>W</td>
+                <td>X</td>
+                <td>Y</td>
+                <td>Z</td>
                 <td>—</td>
               </tr>
             </tbody>
@@ -1693,6 +1701,154 @@
     }
 
     // Inicializar mostrando la Lámina 1
+    
+    // Función para descargar / imprimir exclusivamente la Tabla de la Matriz Alfabética en PDF
+    function descargarTablaMatrizPDF() {
+      const printWindow = window.open('', '_blank', 'width=800,height=600');
+      const tableHtml = document.getElementById('tablaMatrizAlfabetica').outerHTML;
+      
+      printWindow.document.write(`
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+          <meta charset="UTF-8">
+          <title>Vidia • Matriz Alfabética Pitagórica Universal</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+          <style>
+            @page {
+              size: A4 landscape;
+              margin: 15mm 15mm;
+              @bottom-right {
+                content: "Sistema Vidia • https://vidia-portal.vercel.app/";
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-size: 8pt;
+                color: #64748b;
+              }
+            }
+            body {
+              font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+              padding: 2rem;
+              color: #0f172a;
+              background: #ffffff;
+            }
+            .header-doc {
+              text-align: center;
+              margin-bottom: 2rem;
+              border-bottom: 2px solid #4338ca;
+              padding-bottom: 1.5rem;
+            }
+            .header-badge {
+              display: inline-block;
+              font-size: 0.75rem;
+              font-weight: 800;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              color: #4338ca;
+              background: #ede9fe;
+              padding: 4px 12px;
+              border-radius: 9999px;
+              margin-bottom: 0.5rem;
+            }
+            .header-title {
+              font-size: 1.6rem;
+              font-weight: 800;
+              color: #0f172a;
+              margin: 0;
+            }
+            .header-sub {
+              font-size: 0.95rem;
+              color: #64748b;
+              margin-top: 0.25rem;
+            }
+            .table-wrapper {
+              border: 2px solid #4338ca;
+              border-radius: 10px;
+              overflow: hidden;
+              box-shadow: 0 4px 12px rgba(67, 56, 202, 0.08);
+            }
+            .table-caption-flex {
+              display: none !important;
+            }
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              text-align: center;
+            }
+            th {
+              background: #ede9fe !important;
+              color: #4338ca !important;
+              font-family: 'JetBrains Mono', monospace;
+              font-size: 1.6rem !important;
+              font-weight: 800 !important;
+              padding: 1.25rem 0.5rem !important;
+              border-bottom: 3px solid #4338ca !important;
+              border-right: 1px solid #c7d2fe;
+            }
+            th:last-child {
+              border-right: none;
+            }
+            td {
+              font-size: 1.2rem !important;
+              font-weight: 700 !important;
+              padding: 1.15rem 0.5rem !important;
+              border-bottom: 1px solid #e2e8f0;
+              border-right: 1px solid #e2e8f0;
+              color: #0f172a !important;
+            }
+            td:last-child {
+              border-right: none;
+            }
+            tr:last-child td {
+              border-bottom: none;
+            }
+            .rules-box {
+              margin-top: 1.75rem;
+              padding: 1rem 1.25rem;
+              background: #f8fafc;
+              border: 1px solid #e2e8f0;
+              border-radius: 8px;
+              font-size: 0.85rem;
+              color: #475569;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0.75rem;
+            }
+            .rules-box strong { color: #0f172a; }
+            .no-print { display: none !important; }
+          </style>
+        </head>
+        <body>
+          <div class="header-doc">
+            <span class="header-badge">Ficha Técnica de Consulta Rápida</span>
+            <h1 class="header-title">Matriz Alfabética Pitagórica Universal</h1>
+            <p class="header-sub">Sistema Vidia • Conversión Fonética Estandarizada para Lengua Española</p>
+          </div>
+          
+          ${tableHtml}
+
+          <div class="rules-box">
+            <div>
+              &bull; <strong>Vocales acentuadas (Á, É, Í, Ó, Ú):</strong> Conservan el valor numérico natural de su raíz vocálica.<br>
+              &bull; <strong>Letra Ñ:</strong> Equivale fonológicamente a la N (Columna 5).
+            </div>
+            <div>
+              &bull; <strong>Letra H muda:</strong> Siempre suma como consonante en la columna 8.<br>
+              &bull; <strong>Dígrafos (CH, LL, RR):</strong> Se descomponen letra por letra (C+H, L+L, R+R).
+            </div>
+          </div>
+        </body>
+        </html>
+      `);
+      
+      printWindow.document.close();
+      printWindow.focus();
+      setTimeout(() => {
+        printWindow.print();
+      }, 350);
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       setDiagramSheet('teorico');
     });

@@ -1262,3 +1262,64 @@ blockquote.quote-box cite {
   border-color: var(--vidia-primary);
   color: var(--vidia-primary);
 }
+
+/* ==========================================================================
+   MATRIZ ALFABÉTICA PITAGÓRICA UNIVERSAL (FICHA TÉCNICA Y CONSULTA)
+   ========================================================================== */
+.table-matrix-alphabet th {
+  background-color: #ede9fe !important;
+  color: #4338ca !important;
+  font-family: var(--font-mono);
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  padding: 0.85rem 0.5rem !important;
+  border-bottom: 2.5px solid #6366f1 !important;
+  border-right: 1px solid #c7d2fe !important;
+}
+
+.table-matrix-alphabet td {
+  text-align: center !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  padding: 0.9rem 0.5rem !important;
+  color: #0f172a !important;
+}
+
+.table-matrix-alphabet td:hover {
+  background-color: #f5f3ff !important;
+}
+
+.table-caption-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: var(--vidia-slate-100);
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--vidia-slate-200);
+}
+
+.btn-table-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--vidia-primary);
+  background: #ffffff;
+  border: 1px solid #c7d2fe;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.btn-table-print:hover {
+  background: var(--vidia-primary);
+  color: #ffffff;
+  border-color: var(--vidia-primary);
+  box-shadow: 0 2px 6px rgba(67, 56, 202, 0.15);
+}
