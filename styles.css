@@ -488,10 +488,17 @@ blockquote.quote-box cite {
 
 /* Visualizador de la Arquitectura de la Fecha */
 .architecture-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin: 1.5rem 0;
+}
+
+.architecture-box .arch-node {
+  flex: 1 1 210px;
+  max-width: 280px;
+  min-width: 210px;
 }
 
 .arch-node {
@@ -1148,9 +1155,10 @@ blockquote.quote-box cite {
 
 .module-card {
   background: #ffffff;
-  border: 1px solid var(--vidia-slate-200);
+  border: 2px solid var(--vidia-primary);
   border-radius: 12px;
   padding: 1.75rem 2rem;
+  box-shadow: 0 4px 16px rgba(67, 56, 202, 0.08);
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -1213,6 +1221,7 @@ blockquote.quote-box cite {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-left: auto;
 }
 
 .btn-read {
