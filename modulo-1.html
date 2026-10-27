@@ -15,7 +15,341 @@
 </head>
 <body>
 
-  <!-- ==================================================================
+  <!-- ======================================================================
+       CABECERA DE NAVEGACIÓN GLOBAL
+       ====================================================================== -->
+  <header class="global-header no-print">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper" title="Volver a la portada e índice">
+        <div class="brand-icon">V</div>
+        <div>
+          <div class="brand-title">Vidia Numerología</div>
+          <span class="brand-badge">Ebook Interactivo & PDF</span>
+        </div>
+      </a>
+
+      <!-- Botones de Navegación del Curso -->
+      <nav class="nav-buttons" aria-label="Navegación entre capítulos">
+        <a href="index.html" class="btn-nav" title="Volver al índice general del manual">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Índice</span>
+        </a>
+
+        <a href="https://vidia-portal.vercel.app/" class="btn-nav" title="Ir a la App Web principal" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>App Vidia</span>
+        </a>
+
+        <a href="modulo-2.html" class="btn-nav" title="Ir al capítulo siguiente">
+          <span>Cap. Siguiente (Módulo II)</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+
+        <!-- Botón de Descarga / Impresión PDF -->
+        <button onclick="window.print()" class="btn-nav btn-nav-primary" title="Imprimir o Guardar como PDF limpio">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Descargar PDF</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       CUERPO EDITORIAL PRINCIPAL
+       ====================================================================== -->
+  <main class="main-wrapper">
+    <article class="document-sheet">
+
+      <!-- ENCABEZADO DEL CAPÍTULO -->
+      <header class="module-header">
+        <div class="module-meta">
+          <span class="module-number">MÓDULO I</span>
+          <span class="badge-tag">Fundamentos</span>
+        </div>
+        <h1 class="module-title">MÓDULO I: FUNDAMENTOS E HISTORIA</h1>
+        <p class="module-subtitle">El Filósofo que no Buscaba Adivinar, sino Comprender: De la Acústica Antigua a la Ciencia Moderna</p>
+
+        <!-- Cuadro Premisa Metodológica -->
+        <div class="callout-premise">
+          <div class="callout-title">Premisa Metodológica de Vidia</div>
+          <p class="callout-text">
+            La numerología seria no exige fe a ciegas ni fatalismo mágico. Se fundamenta en la observación rigurosa de las leyes de proporción, la física acústica del sonido y la contrastación empírica en biografías humanas. <strong>Los números no determinan tu futuro; describen tu mapa de potencialidades y los ciclos disponibles para que tu libre albedrío tome decisiones conscientes.</strong>
+          </p>
+        </div>
+      </header>
+
+      <!-- TABLA DE CONTENIDOS DEL CAPÍTULO (TOC) -->
+      <nav id="tabla-de-contenidos" class="toc-card" aria-label="Tabla de contenidos del capítulo">
+        <h2 class="toc-card-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          Tabla de Contenidos del Capítulo
+        </h2>
+        <ul class="toc-list">
+          <li class="toc-item">
+            <a href="#punto-1" class="toc-link">
+              <span class="toc-num">1.</span>
+              <span>El Descubrimiento de Pitágoras: La Música es Matemática en Acción</span>
+            </a>
+          </li>
+          <li class="toc-item">
+            <a href="#punto-2" class="toc-link">
+              <span class="toc-num">2.</span>
+              <span>De la Escuela Antigua a la Escuela Moderna: El Puente de 2500 Años</span>
+            </a>
+          </li>
+          <li class="toc-item">
+            <a href="#punto-3" class="toc-link">
+              <span class="toc-num">3.</span>
+              <span>Las Mentes Pioneras: Sarah Joanna Dennis y la Dra. Juno Jordan</span>
+            </a>
+          </li>
+          <li class="toc-item">
+            <a href="#punto-4" class="toc-link">
+              <span class="toc-num">4.</span>
+              <span>El Mapa y el Territorio: Soberanía Personal frente al Determinismo</span>
+            </a>
+          </li>
+          <li class="toc-item">
+            <a href="#punto-5" class="toc-link">
+              <span class="toc-num">5.</span>
+              <span>Las Estaciones del Tiempo: La Metáfora del Meteorólogo</span>
+            </a>
+          </li>
+          <li class="toc-item">
+            <a href="#punto-6" class="toc-link">
+              <span class="toc-num">6.</span>
+              <span>La Carta Numerológica Integral: Estructura en 3 Dimensiones</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ==================================================================
+           SECCIÓN 1: EL DESCUBRIMIENTO DE PITÁGORAS
+           ================================================================== -->
+      <section id="punto-1" class="content-section">
+        <h2 class="section-heading">
+          <span>1. El Descubrimiento de Pitágoras: La Música es Matemática en Acción</span>
+        </h2>
+        
+        <p>
+          Mucho antes de que existieran las computadoras, los algoritmos o la física cuántica, en la antigua Grecia un hombre comprendió algo revolucionario: <strong>todo lo que nos rodea puede traducirse a números</strong>. Ese hombre fue Pitágoras de Samos (c. 570 &ndash; 495 a.C.).
+        </p>
+
+        <!-- INFOGRAFÍA GEOGRÁFICA COMPARATIVA VIDIA -->
+        <figure style="margin: 2rem 0; text-align: center;">
+          <img src="mapa-pitagoras.jpg" alt="Mapa comparativo entre la Geografía Antigua (S. VI a.C.) y la Geografía Actual con Samos y Crotona" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid var(--vidia-slate-200);">
+          <figcaption style="margin-top: 0.6rem; font-size: 0.82rem; color: var(--vidia-slate-500); font-style: italic;">
+            Infografía Vidia: Trayectoria de Pitágoras desde su cuna natal en la isla de Samos hasta la fundación de su escuela en Crotona (Magna Grecia / actual sur de Italia).
+          </figcaption>
+        </figure>
+
+        <div class="note-box note-box-history">
+          <div class="note-box-header">
+            <span class="badge-tag">CONTEXTO HISTÓRICO</span>
+            <h4 class="note-box-title">Nota Histórica sobre Samos</h4>
+          </div>
+          <p class="note-box-text">
+            Samos era una próspera isla-estado griega situada en la antigua región de Jonia, en el mar Egeo oriental, muy cerca de la costa de Asia Menor (lo que hoy en día corresponde al oeste de Turquía). Políticamente y en la actualidad, Samos pertenece oficialmente a Grecia.
+          </p>
+        </div>
+
+        <p>
+          Lejos de la imagen folclórica del místico aislado, Pitágoras fundó en Crotona la célebre Escuela Pitagórica, donde la matemática no se enseñaba como un ejercicio mecánico de contabilidad, sino como la estructura atómica y vibracional del cosmos.
+        </p>
+
+        <h3 class="sub-heading">El Experimento del Monocordio: La Física del Sonido</h3>
+        <p>
+          Además de formular el célebre <strong>Teorema de Pitágoras</strong> sobre los lados del triángulo rectángulo —principio geométrico fundamental que sostiene hasta hoy las bases de <strong>la matemática, la ingeniería estructural y la arquitectura moderna</strong>—, Pitágoras descubrió que la belleza musical responde a proporciones matemáticas fijas:
+        </p>
+
+        <div class="architecture-box">
+          <div class="arch-node">
+            <div class="arch-label">Proporción 1:1</div>
+            <div class="arch-value">Cuerda al Aire</div>
+            <div class="arch-desc">Vibra el 100% de la longitud. Produce el tono fundamental base.</div>
+          </div>
+          <div class="arch-node">
+            <div class="arch-label">Proporción 2:1</div>
+            <div class="arch-value">Traste 12 (Mitad)</div>
+            <div class="arch-desc">La cuerda se divide por la mitad. Vibra al doble de frecuencia: misma nota en una <strong>octava más aguda</strong>.</div>
+          </div>
+          <div class="arch-node highlight">
+            <div class="arch-label">Proporción 3:2</div>
+            <div class="arch-value">Traste 7 (2/3)</div>
+            <div class="arch-desc">Genera la <strong>quinta justa</strong>, intervalo que el oído humano percibe como plenamente armónico y placentero.</div>
+          </div>
+        </div>
+
+        <p>
+          Por primera vez en la historia, la ciencia demostró que una experiencia tan sutil y profundamente emotiva como la música estaba gobernada por una ley aritmética verificable. Siguiendo esa misma analogía, podemos observar la vida humana como una partitura en desarrollo, donde cada número actúa como una pauta de afinación para comprender nuestro propio diseño.
+        </p>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            <span>Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECCIÓN 2: ESCUELA ANTIGUA VS MODERNA
+           ================================================================== -->
+      <section id="punto-2" class="content-section">
+        <h2 class="section-heading">
+          <span>2. De la Escuela Antigua a la Escuela Moderna: El Puente de 2500 Años</span>
+        </h2>
+        
+        <p>
+          La numerología aplicada que estudiamos hoy no es un calco directo de lo que se practicaba en Grecia en el siglo VI a.C. Ha experimentado una evolución decisiva en dos grandes etapas:
+        </p>
+
+        <div class="architecture-box">
+          <div class="arch-node">
+            <div class="arch-label">Escuela Pitagórica Antigua (Clásica)</div>
+            <h4 style="font-size: 1.1rem; color: var(--vidia-slate-900); margin: 0.5rem 0;">Cosmológica y Sagrada</h4>
+            <p class="arch-desc">
+              Pitágoras y sus discípulos no realizaban "lecturas de cartas natales individuales" ni computaban nombres latinos. Estudiaban la naturaleza de los dígitos del 1 al 10 (con la <strong>Tetraktys</strong> como cumbre) para explicar el orden de las galaxias y de la materia a escala universal.
+            </p>
+          </div>
+          <div class="arch-node highlight">
+            <div class="arch-label">Escuela Pitagórica Moderna (Contemporánea)</div>
+            <h4 style="font-size: 1.1rem; color: var(--vidia-primary); margin: 0.5rem 0;">Psicológica y Aplicada</h4>
+            <p class="arch-desc">
+              Nacida a inicios del siglo XX, traduce la filosofía de las proporciones universales a la experiencia humana individual. Nos brinda un lenguaje concreto para comprender talentos innatos, superar inercias inconscientes y navegar las etapas de nuestra propia biografía.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            <span>Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECCIÓN 3: LAS MENTES PIONERAS
+           ================================================================== -->
+      <section id="punto-3" class="content-section">
+        <h2 class="section-heading">
+          <span>3. Las Mentes Pioneras: Sarah Joanna Dennis y la Dra. Juno Jordan</span>
+        </h2>
+        
+        <p>
+          Para entender el método moderno, debemos situarnos en Atlantic City, New Jersey, entre 1900 y 1920. En una época deslumbrada por la telegrafía sin hilos y las ondas hertzianas, <strong>Sarah Joanna Dennis (1847&ndash;1929)</strong> &mdash;conocida públicamente como <em>Mrs. L. Dow Balliett</em>&mdash; unió tres pilares: la escala musical pitagórica, la física de la resonancia acústica y el alfabeto occidental.
+        </p>
+
+        <div class="note-box note-box-history">
+          <div class="note-box-header">
+            <span class="badge-tag">CONTEXTO HISTÓRICO</span>
+            <h4 class="note-box-title">¿Por qué firmaba con el nombre de su esposo?</h4>
+          </div>
+          <p class="note-box-text">
+            En la época victoriana, las convenciones sociales dictaban que las mujeres casadas fueran acreditadas mediante la identidad formal de sus cónyuges. Firmar como <em>Mrs. L. Dow Balliett</em> le concedió legitimidad ante un mercado editorial dominado por hombres. Hoy rescatamos su nombre propio, <strong>Sarah Joanna Dennis</strong>, como la verdadera arquitecta del método.
+          </p>
+        </div>
+
+        <p>
+          Dennis diseñó la <strong>matriz decimal de conversión</strong> del alfabeto <code>(A = 1, B = 2... I = 9)</code>, descubrió que las <strong>vocales</strong> expresan el deseo íntimo (<strong>Impulso del Alma</strong>) y las <strong>consonantes</strong> la proyección exterior (<strong>Personalidad</strong>), e identificó los <strong>Números Maestros</strong> (11, 22, 33). Entre 1904 y 1917 publicó obras fundacionales como <em>La filosofía de los números: sus tonos y colores</em> (<em>The Philosophy of Numbers: Their Tone and Colors</em>), disponible en dominio público para su consulta en Internet Archive.
+        </p>
+
+        <div class="note-box note-box-curiosity">
+          <div class="note-box-header">
+            <span class="badge-tag">CURIOSIDAD HISTÓRICA</span>
+            <h4 class="note-box-title">El Origen de la Palabra "Numerología"</h4>
+          </div>
+          <p class="note-box-text">
+            Pitágoras nunca escuchó la palabra "Numerología". Durante milenios el saber se conoció como <em>aritmancia</em> o <em>ciencia de las vibraciones numéricas</em>. El término en inglés <strong>Numerology</strong> fue acuñado en 1912 por una colega de Balliett, la <strong>Dra. Julia Seton Sears</strong>, para brindarle un marco científico y renovado a la disciplina.
+          </p>
+        </div>
+
+        <h3 class="sub-heading">La Contrastación Empírica: La Dra. Juno Jordan</h3>
+        <p>
+          A los 14 años, <strong>Juno Jordan (1884&ndash;1984)</strong> comenzó a formarse directamente con Sarah Balliett. Ya recibida de cirujana dentista y con formación en el método científico, fundó en California el célebre <strong>Instituto de Investigación Numérica de California</strong> (<em>California Institute of Numerical Research</em>).
+        </p>
+        <p>
+          Durante más de 25 años de investigaciones clínicas continuas, Jordan y su equipo contrastaron miles de biografías, fechas y nombres reales. Su investigación permitió descartar fórmulas supersticiosas y confirmar empíricamente los cálculos de mayor consistencia. Su obra cumbre de 1965, <strong><em>El romance en tu nombre</em> (<em>The Romance in Your Name</em>)</strong> —publicada por DeVorss &amp; Company y disponible para estudio en bibliotecas abiertas como Internet Archive—, consolidó de forma definitiva la arquitectura de la Carta Numerológica moderna.
+        </p>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            <span>Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECCIÓN 4: MAPA VS TERRITORIO
+           ================================================================== -->
+      <section id="punto-4" class="content-section">
+        <h2 class="section-heading">
+          <span>4. El Mapa y el Territorio: Soberanía Personal frente al Determinismo</span>
+        </h2>
+        
+        <p>
+          En la escuela Vidia, la numerología no adivina el futuro ni sentencia la suerte. Para comprender su función, recurrimos a la clásica premisa de Alfred Korzybski:
+        </p>
+
+        <div class="architecture-box">
+          <div class="arch-node">
+            <div class="arch-label">1. El Mapa (Potencial)</div>
+            <div class="arch-value">Código Fuente</div>
+            <div class="arch-desc">Describe tus dones de fábrica, zonas de sombra inconscientes y la dirección de menor resistencia (Camino de Vida).</div>
+          </div>
+          <div class="arch-node highlight">
+            <div class="arch-label">2. El Territorio (Realidad)</div>
+            <div class="arch-value">Libre Albedrío</div>
+            <div class="arch-desc">Es la biografía concreta que construyes a diario mediante tu conciencia, decisiones y responsabilidad personal.</div>
+          </div>
+        </div>
+
+        <blockquote class="quote-box">
+          «Los números no te atan a un destino prefijado; encienden las luces del tablero de comandos para que seas tú quien pilotee su vida con lucidez y soberanía».
+        </blockquote>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            <span>Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SECCIÓN 5: ESTACIONES DEL TIEMPO
+           ================================================================== -->
+      <section id="punto-5" class="content-section">
+        <h2 class="section-heading">
+          <span>5. Las Estaciones del Tiempo: La Metáfora del Meteorólogo</span>
+        </h2>
+        
+        <p>
+          ¿Predicen los ciclos (Años Personales, Pináculos) lo que va a sucederte? La respuesta es categórica: <strong>no son una sentencia, sino una previsión del clima energético</strong>.
+        </p>
+
+        <div class="feature-card">
+          <h4 class="feature-card-title">La Metáfora del Clima</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--vidia-slate-700);">
+            Si el meteorólogo anuncia una tormenta con temperaturas bajo cero, esa advertencia no restringe tu libertad: te brinda información estratégica. Puedes salir desabrigado y sufrir las consecuencias, o puedes ponerte abrigo adecuado y avanzar de manera segura.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--vidia-slate-700); margin: 0;">
+            Un <strong>Año Personal 7</strong> no determina que "te irá mal en los negocios", sino que señala que la marea energética favorece el estudio, la pausa y el discernimiento interno por encima de la expansión material desenfrenada. Conocer el clima te permite navegar con el viento a favor en lugar de remar a contracorriente.
+          </p>
+        </div>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            <span>Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================================================================
            SECCIÓN 6: ANATOMÍA DE LA CARTA
            ================================================================== -->
       <section id="punto-6" class="content-section">
@@ -90,7 +424,7 @@
               </div>
               <div class="dimension-item">
                 <span class="dimension-term">Los Desafíos:</span>
-                Las pruebas psicológicas y lecciones kármicas que acompañan a cada pináculo.
+                Las pruebas psicológicas y lecciones que acompañan y tensan productivamente a cada pináculo.
               </div>
               <div class="dimension-item">
                 <span class="dimension-term">El Año Personal:</span>
