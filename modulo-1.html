@@ -5,40 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MÓDULO I: Fundamentos e Historia • Vidia Numerología</title>
   
-  <!-- Tipografías editoriales -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Lora:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Hoja de estilos centralizada -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- CABECERA GLOBAL -->
+  <!-- CABECERA GLOBAL OSCURA -->
   <header class="global-header no-print">
     <div class="header-container">
-      <a href="index.html" class="brand-wrapper" title="Volver al índice">
+      <a href="index.html" class="brand-wrapper" title="Volver al índice general">
         <div class="brand-icon">V</div>
         <div>
           <div class="brand-title">Vidia Numerología</div>
-          <span class="brand-badge">Manual Oficial del Estudiante</span>
+          <span class="brand-badge">EBOOK INTERACTIVO &amp; PDF</span>
         </div>
       </a>
-      <nav class="nav-buttons">
-        <a href="https://vidia-portal.vercel.app/" class="btn-nav" target="_blank" rel="noopener">
+
+      <nav class="nav-buttons" aria-label="Navegación del curso">
+        <a href="index.html" class="btn-nav" title="Volver al índice general del manual">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Índice</span>
+        </a>
+
+        <a href="https://vidia-portal.vercel.app/" class="btn-nav" title="Ir a la App Web principal" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           <span>App Vidia</span>
         </a>
-        <button onclick="window.print()" class="btn-nav btn-nav-primary" title="Imprimir o Guardar como PDF">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+
+        <a href="modulo-2.html" class="btn-nav" title="Ir al capítulo siguiente">
+          <span>Cap. Siguiente (Módulo II)</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+
+        <button onclick="window.print()" class="btn-nav btn-nav-primary" title="Imprimir o Guardar como PDF limpio">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           <span>Descargar PDF</span>
         </button>
       </nav>
     </div>
   </header>
 
-  <!-- CUERPO PRINCIPAL -->
+  <!-- CONTENEDOR EDITORIAL -->
   <main class="main-wrapper">
     <article class="document-sheet">
 
@@ -63,7 +73,7 @@
       <nav id="tabla-de-contenidos" class="toc-card no-print" aria-label="Tabla de contenidos del capítulo">
         <h2 class="toc-card-title">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-          Índice del Módulo
+          Tabla de Contenidos del Capítulo
         </h2>
         <ul class="toc-list">
           <li class="toc-item"><a href="#punto-1" class="toc-link"><span class="toc-num">1.</span><span>El Descubrimiento de Pitágoras: La Música es Matemática en Acción</span></a></li>
@@ -86,7 +96,6 @@
           Lejos de la imagen folclórica del místico aislado, Pitágoras fundó en Crotona la célebre Escuela Pitagórica, donde la matemática no se enseñaba como un ejercicio mecánico de contabilidad, sino como la estructura atómica y vibracional del cosmos.
         </p>
 
-        <!-- Infografía Geográfica -->
         <figure style="margin: 2rem 0; text-align: center;">
           <img src="mapa-pitagoras.jpg" alt="Mapa comparativo entre Samos y Crotona" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid var(--vidia-slate-200);">
           <figcaption style="margin-top: 0.6rem; font-size: 0.82rem; color: var(--vidia-slate-500); font-style: italic;">
@@ -94,10 +103,10 @@
           </figcaption>
         </figure>
 
-        <!-- Contexto Histórico -->
         <div class="note-box note-box-history">
           <div class="note-box-header">
             <span class="badge-tag">CONTEXTO HISTÓRICO</span>
+            <h4 class="note-box-title">Nota Histórica sobre Samos</h4>
           </div>
           <p class="note-box-text">
             <strong>Samos</strong> era una próspera polis griega en el mar Egeo oriental, frente a las costas de Asia Menor (actual Turquía); hoy pertenece oficialmente a Grecia. Huyendo de la tiranía de Polícrates, Pitágoras emigró hacia el occidente y fundó su comunidad en <strong>Crotona</strong> (c. 530 a.C.), una influyente ciudad marítima de la <strong>Magna Grecia</strong> —territorio colonizado por los griegos en el sur de la península itálica—. En la actualidad, <strong>Crotone</strong> existe y es una ciudad y provincia italiana situada en la región de Calabria (frente al mar Jónico).
@@ -109,23 +118,22 @@
           Además de formular el célebre <strong>Teorema de Pitágoras</strong> sobre los lados del triángulo rectángulo —principio geométrico fundamental que sostiene hasta hoy las bases de <strong>la matemática, la ingeniería estructural y la arquitectura moderna</strong>—, Pitágoras descubrió que la belleza musical responde a proporciones matemáticas fijas:
         </p>
 
+        <!-- CARDS MONOCORDIO (PRINT 1) -->
         <div class="architecture-box">
           <div class="arch-node">
-            <div class="arch-label">Proporción 1:1</div>
+            <div class="arch-label">PROPORCIÓN 1:1</div>
             <div class="arch-value">Cuerda al Aire</div>
             <div class="arch-desc">Vibra el 100% de la longitud. Produce el tono fundamental base.</div>
           </div>
           <div class="arch-node">
-            <div class="arch-label">Proporción 2:1</div>
+            <div class="arch-label">PROPORCIÓN 2:1</div>
             <div class="arch-value">Traste 12 (Mitad)</div>
             <div class="arch-desc">La cuerda se divide por la mitad. Vibra al doble de frecuencia: misma nota en una <strong>octava más aguda</strong>.</div>
           </div>
           <div class="arch-node highlight">
             <div class="arch-label">PROPORCIÓN 3:2 • EL DESCUBRIMIENTO CUMBRE</div>
-            <div class="arch-value">Traste 7 (2/3) — Quinta Justa</div>
-            <div class="arch-desc">
-              ¿Por qué es la relación más importante? Porque mientras dividir por la mitad solo repite la misma nota más aguda, la relación 3:2 introduce por primera vez un sonido cualitativamente nuevo pero en perfecta consonancia. A partir de encadenar estas quintas (el ciclo de quintas pitagórico), Pitágoras dedujo matemáticamente todas las notas de la escala musical occidental.
-            </div>
+            <div class="arch-value">Traste 7 (2/3)</div>
+            <div class="arch-desc">Genera la <strong>quinta justa</strong>. Introduce por primera vez un sonido cualitativamente nuevo pero en perfecta consonancia. A partir de encadenar estas quintas, Pitágoras dedujo matemáticamente todas las notas de la escala musical.</div>
           </div>
         </div>
 
@@ -135,8 +143,7 @@
 
         <div class="section-footer-nav no-print">
           <a href="#tabla-de-contenidos" class="btn-back-toc">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
-            <span>Subir al Índice</span>
+            <span>^ Subir a la Tabla de Contenidos</span>
           </a>
         </div>
       </section>
@@ -147,19 +154,24 @@
         <p>
           La numerología aplicada que estudiamos hoy no es un calco directo de lo que se practicaba en Grecia en el siglo VI a.C. Ha experimentado una evolución decisiva en dos grandes etapas:
         </p>
-        <ul class="styled-list">
-          <li>
-            <strong>Escuela Pitagórica Antigua (Clásica) — Cosmológica y Sagrada:</strong> Pitágoras y sus discípulos no realizaban «lecturas de cartas natales individuales» ni computaban nombres latinos. Estudiaban la naturaleza de los dígitos del 1 al 10 (con la <strong>Tetraktys</strong> como cumbre) para explicar el orden de las galaxias y de la materia a escala universal.
-          </li>
-          <li>
-            <strong>Escuela Pitagórica Moderna (Contemporánea) — Psicológica y Aplicada:</strong> Nacida a inicios del siglo XX, traduce la filosofía de las proporciones universales a la experiencia humana individual. Nos brinda un lenguaje concreto para comprender talentos innatos, superar inercias inconscientes y navegar las etapas de nuestra propia biografía.
-          </li>
-        </ul>
+
+        <!-- CARDS ESCUELAS (PRINT 1) -->
+        <div class="architecture-box">
+          <div class="arch-node">
+            <div class="arch-label">ESCUELA PITAGÓRICA ANTIGUA (CLÁSICA)</div>
+            <div class="arch-value">Cosmológica y Sagrada</div>
+            <div class="arch-desc">Pitágoras y sus discípulos no realizaban «lecturas de cartas natales individuales» ni computaban nombres latinos. Estudiaban la naturaleza de los dígitos del 1 al 10 (con la <strong>Tetraktys</strong> como cumbre) para explicar el orden de las galaxias y de la materia a escala universal.</div>
+          </div>
+          <div class="arch-node school-modern">
+            <div class="arch-label">ESCUELA PITAGÓRICA MODERNA (CONTEMPORÁNEA)</div>
+            <div class="arch-value">Psicológica y Aplicada</div>
+            <div class="arch-desc">Nacida a inicios del siglo XX, traduce la filosofía de las proporciones universales a la experiencia humana individual. Nos brinda un lenguaje concreto para comprender talentos innatos, superar inercias inconscientes y navegar las etapas de nuestra propia biografía.</div>
+          </div>
+        </div>
 
         <div class="section-footer-nav no-print">
           <a href="#tabla-de-contenidos" class="btn-back-toc">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
-            <span>Subir al Índice</span>
+            <span>^ Subir a la Tabla de Contenidos</span>
           </a>
         </div>
       </section>
@@ -200,13 +212,12 @@
           A los 14 años, <strong>Juno Jordan (1884&ndash;1984)</strong> comenzó a formarse directamente con Sarah Balliett. Ya recibida de cirujana dentista y con formación en el método científico, fundó en California el célebre <strong>Instituto de Investigación Numérica de California</strong> (<em>California Institute of Numerical Research</em>).
         </p>
         <p>
-          Durante más de 25 años de investigaciones clínicas continuas, Jordan y su equipo contrastaron miles de biografías, fechas y nombres reales. Su investigación permitió descartar fórmulas supersticiosas y confirmar empíricamente los cálculos de mayor consistencia. Su obra cumbre de 1965, <strong><em>El romance en tu nombre</em> (<em>The Romance in Your Name</em>)</strong> —publicada por DeVorss & Company y preservada para consulta de estudio en bibliotecas abiertas como Internet Archive—, consolidó de forma definitiva la arquitectura de la Carta Numerológica moderna.
+          Durante más de 25 años de investigaciones clínicas continuas, Jordan y su equipo contrastaron miles de biografías, fechas y nombres reales. Su investigación permitió descartar fórmulas supersticiosas y confirmar empíricamente los cálculos de mayor consistencia. Su obra cumbre de 1965, <strong><em>El romance en tu nombre</em> (<em>The Romance in Your Name</em>)</strong> —publicada por DeVorss & Company y disponible para estudio en bibliotecas abiertas como Internet Archive—, consolidó de forma definitiva la arquitectura de la Carta Numerológica moderna.
         </p>
 
         <div class="section-footer-nav no-print">
           <a href="#tabla-de-contenidos" class="btn-back-toc">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
-            <span>Subir al Índice</span>
+            <span>^ Subir a la Tabla de Contenidos</span>
           </a>
         </div>
       </section>
@@ -228,35 +239,35 @@
 
         <h3 class="sub-heading">Dimensión 1: Las Coordenadas Natales (La Fecha de Nacimiento)</h3>
         <p>Representa tu punto de partida, tu diseño de fábrica y el marco evolutivo con el que llegas al mundo:</p>
-        <ul class="styled-list">
-          <li><strong>Día Natal (Tu Talento Innato):</strong> Describe tu herramienta temperamental primaria, tus respuestas reflejas automáticas y cómo enfrentas los desafíos cotidianos sin necesidad de pensarlo.</li>
-          <li><strong>Mes Natal (Tu Raíz Emocional):</strong> Define el filtro a través del cual procesas el mundo afectivo, los vínculos íntimos y tus patrones emocionales profundos.</li>
-          <li><strong>Año Natal (Tu Raíz Generacional):</strong> Enmarca el contexto histórico y la lección de época compartida con tus contemporáneos.</li>
-          <li><strong>Suma Total de la Fecha (Camino de Vida):</strong> Es el número fundamental y eje de la carta. Señala tu misión de aprendizaje mayor y la dirección de menor resistencia para tu crecimiento personal.</li>
+        <ul style="list-style: square; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--vidia-slate-700);">
+          <li style="margin-bottom: 0.5rem;"><strong>Día Natal (Tu Talento Innato):</strong> Describe tu herramienta temperamental primaria, tus respuestas reflejas automáticas y cómo enfrentas los desafíos cotidianos sin necesidad de pensarlo.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Mes Natal (Tu Raíz Emocional):</strong> Define el filtro a través del cual procesas el mundo afectivo, los vínculos íntimos y tus patrones emocionales profundos.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Año Natal (Tu Raíz Generacional):</strong> Enmarca el contexto histórico y la lección de época compartida con tus contemporáneos.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Suma Total de la Fecha (Camino de Vida):</strong> Es el número fundamental y eje de la carta. Señala tu misión de aprendizaje mayor y la dirección de menor resistencia para tu crecimiento personal.</li>
         </ul>
 
         <h3 class="sub-heading">Dimensión 2: La Matriz Onomástica (La Acústica del Nombre Completo)</h3>
         <p>Representa tu vehículo de acción en la materia y cómo canalizas ese potencial de fábrica en la sociedad a través del valor sonoro de tu nombre legal registrado:</p>
-        <ul class="styled-list">
-          <li><strong>Suma de las Vocales (Impulso del Alma):</strong> Revela tus motivaciones privadas, qué anhelas en tu intimidad y qué necesitas experimentar para sentir plenitud y bienestar interior.</li>
-          <li><strong>Suma de las Consonantes (Personalidad Exterior):</strong> Describe la primera impresión que proyectas en el entorno, tu fachada social y el mecanismo de protección que utilizas al vincularte con los demás.</li>
-          <li><strong>Suma Total de Letras (Número de Expresión):</strong> Es el motor operativo de tu vida práctica. Define tus talentos profesionales, habilidades concretas y la forma en que ejecutas tus metas en el mundo material.</li>
+        <ul style="list-style: square; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--vidia-slate-700);">
+          <li style="margin-bottom: 0.5rem;"><strong>Suma de las Vocales (Impulso del Alma):</strong> Revela tus motivaciones privadas, qué anhelas en tu intimidad y qué necesitas experimentar para sentir plenitud y bienestar interior.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Suma de las Consonantes (Personalidad Exterior):</strong> Describe la primera impresión que proyectas en el entorno, tu fachada social y el mecanismo de protección que utilizas al vincularte con los demás.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Suma Total de Letras (Número de Expresión):</strong> Es el motor operativo de tu vida práctica. Define tus talentos profesionales, habilidades concretas y la forma en que ejecutas tus metas en el mundo material.</li>
         </ul>
 
         <h3 class="sub-heading">Dimensión 3: Las Dinámicas Temporales (El Factor Tiempo y los Ciclos)</h3>
         <p>La carta no es una fotografía congelada; interactúa permanentemente con el paso del tiempo y sus distintas estaciones biográficas:</p>
-        <ul class="styled-list">
-          <li><strong>Los 4 Pináculos (Estaciones Vitales):</strong> Cuatro grandes ciclos de vida (que abarcan períodos de varias décadas) donde se despliega tu energía para lograr maduración, concreción y aprendizaje.</li>
-          <li><strong>Los Desafíos (Áreas de Tensión y Crecimiento):</strong> Pruebas psicológicas y asignaturas pendientes que acompañan a cada pináculo para impulsarte a desarrollar recursos que aún no tienes integrados.</li>
-          <li><strong>Año Personal (Clima Anual):</strong> La frecuencia específica que rige tus doce meses calendario actuales (en un ciclo de 9 años), marcando si la estación favorece la siembra, la paciencia, la expansión, la introspección o la cosecha.</li>
+        <ul style="list-style: square; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--vidia-slate-700);">
+          <li style="margin-bottom: 0.5rem;"><strong>Los 4 Pináculos (Estaciones Vitales):</strong> Cuatro grandes ciclos de vida (que abarcan períodos de varias décadas) donde se despliega tu energía para lograr maduración, concreción y aprendizaje.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Los Desafíos (Áreas de Tensión y Crecimiento):</strong> Pruebas psicológicas y asignaturas pendientes que acompañan a cada pináculo para impulsarte a desarrollar recursos que aún no tienes integrados.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Año Personal (Clima Anual):</strong> La frecuencia específica que rige tus doce meses calendario actuales (en un ciclo de 9 años), marcando si la estación favorece la siembra, la paciencia, la expansión, la introspección o la cosecha.</li>
         </ul>
 
-        <!-- TABLA RESUMEN / FICHA DE ESTUDIO IMPRIMIBLE -->
+        <!-- TABLA RESUMEN / FICHA DE CONSULTA CON BOTÓN VISIBLE -->
         <div class="table-container">
           <div class="print-table-header no-print">
             <span class="print-table-title">Ficha de Consulta Rápida: La Matriz de la Carta Numerológica Integral</span>
-            <button onclick="window.print()" class="btn-nav" title="Imprimir ficha">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <button onclick="window.print()" class="btn-print-table" title="Imprimir ficha de estudio">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
               <span>Imprimir Ficha</span>
             </button>
           </div>
@@ -271,7 +282,7 @@
             </thead>
             <tbody>
               <tr>
-                <td rowspan="4" class="dim-title">1. Coordenadas Natales<br><small style="font-weight: normal; color: var(--vidia-slate-500);">(Origen y Destino)</small></td>
+                <td rowspan="4" class="dim-title">1. Coordenadas Natales<br><small style="color: var(--vidia-slate-500);">(Origen y Destino)</small></td>
                 <td>Día de Nacimiento</td>
                 <td><strong>Talento Innato</strong></td>
                 <td>Herramienta instintiva de fábrica y respuesta primaria ante los retos cotidianos.</td>
@@ -292,7 +303,7 @@
                 <td>Eje central de la carta: misión evolutiva y ruta de menor resistencia personal.</td>
               </tr>
               <tr>
-                <td rowspan="3" class="dim-title">2. Matriz Onomástica<br><small style="font-weight: normal; color: var(--vidia-slate-500);">(Vehículo y Acción)</small></td>
+                <td rowspan="3" class="dim-title">2. Matriz Onomástica<br><small style="color: var(--vidia-slate-500);">(Vehículo y Acción)</small></td>
                 <td>Suma de Vocales</td>
                 <td><strong>Impulso del Alma</strong></td>
                 <td>Anhelo inconsciente, motivación privada y condiciones para sentir plenitud.</td>
@@ -308,7 +319,7 @@
                 <td>Motor práctico, capacidades profesionales y manifestación concreta en la materia.</td>
               </tr>
               <tr>
-                <td rowspan="3" class="dim-title">3. Dinámicas Temporales<br><small style="font-weight: normal; color: var(--vidia-slate-500);">(Ciclos y Clima)</small></td>
+                <td rowspan="3" class="dim-title">3. Dinámicas Temporales<br><small style="color: var(--vidia-slate-500);">(Ciclos y Clima)</small></td>
                 <td>Fórmulas de Cúspide</td>
                 <td><strong>Los 4 Pináculos</strong></td>
                 <td>Grandes estaciones vitales y etapas biográficas de maduración y florecimiento.</td>
@@ -329,8 +340,7 @@
 
         <div class="section-footer-nav no-print">
           <a href="#tabla-de-contenidos" class="btn-back-toc">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
-            <span>Subir al Índice</span>
+            <span>^ Subir a la Tabla de Contenidos</span>
           </a>
         </div>
       </section>
@@ -364,27 +374,28 @@
           Sin embargo, para interpretar este número con rigor profesional es indispensable derribar el mito del determinismo: la numerología no adivina el futuro ni sentencia la suerte. Su verdadero valor radica en ofrecer un marco de referencia claro para distinguir aquello con lo que venimos al mundo de las decisiones que tomamos a partir de ello:
         </p>
 
+        <!-- CARDS CAMINO DE VIDA VS LIBRE ALBEDRÍO (PRINT 1) -->
         <div class="architecture-box">
           <div class="arch-node">
-            <div class="arch-label">CAMINO DE VIDA</div>
-            <div class="arch-value">Potencial de Origen</div>
+            <div class="arch-label">1. EL MAPA (POTENCIAL)</div>
+            <div class="arch-value">Camino de Vida</div>
             <div class="arch-desc">Representa el eje central de tu carta: tus dones innatos, áreas de aprendizaje evolutivo, zonas de sombra inconscientes y la dirección de menor resistencia para tu desarrollo personal. Es el mapa que te fue entregado al nacer.</div>
           </div>
-          <div class="arch-node highlight centered">
-            <div class="arch-label">DECISIÓN CONSCIENTE • LIBRE ALBEDRÍO</div>
-            <div class="arch-value">Soberanía y Acción</div>
+          <div class="arch-node highlight">
+            <div class="arch-label">2. EL TERRITORIO (REALIDAD)</div>
+            <div class="arch-value">Libre Albedrío</div>
             <div class="arch-desc">Es la biografía concreta que construyes día a día. Ningún número decide por ti: cómo ejecutas ese potencial, el nivel de conciencia con el que actúas y las decisiones que tomas dependen exclusivamente de tu voluntad y responsabilidad personal. Es el territorio por el que decides andar.</div>
           </div>
         </div>
 
+        <!-- CITA ESTILIZADA (PRINT 1) -->
         <blockquote class="quote-box">
           «Los números no te atan a un destino prefijado; encienden las luces del tablero de comandos para que seas tú quien pilotee su vida con lucidez y soberanía».
         </blockquote>
 
         <div class="section-footer-nav no-print">
           <a href="#tabla-de-contenidos" class="btn-back-toc">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
-            <span>Subir al Índice</span>
+            <span>^ Subir a la Tabla de Contenidos</span>
           </a>
         </div>
       </section>
@@ -401,14 +412,13 @@
           El tiempo numerológico funciona exactamente como las condiciones climáticas:
         </p>
 
-        <div class="summary-box compact">
-          <h5>La Advertencia Estratégica</h5>
-          <p>
-            Si el meteorólogo anuncia una tormenta con temperaturas bajo cero, ese pronóstico no restringe tu libertad de movimiento. No te obliga a quedarte encerrado ni decide tu destino: simplemente te brinda información para actuar con inteligencia. Puedes salir desabrigado y sufrir las consecuencias de la intemperie, o puedes vestirte de manera adecuada, tomar precauciones y avanzar con seguridad.
+        <div class="note-box" style="background: #ffffff; border: 1px solid var(--vidia-slate-200); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 1.5rem 0;">
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--vidia-slate-900); margin-bottom: 0.75rem;">La Metáfora del Clima</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--vidia-slate-700); margin-bottom: 1rem;">
+            Si el meteorólogo anuncia una tormenta con temperaturas bajo cero, esa advertencia no restringe tu libertad: te brinda información estratégica. Puedes salir desabrigado y sufrir las consecuencias, o puedes ponerte abrigo adecuado y avanzar de manera segura.
           </p>
-          <h5>El Clima no es Condena, es Guía de Acción</h5>
-          <p style="margin: 0;">
-            Del mismo modo, un <strong>Año Personal 7</strong> no determina fatalmente que «fracasarás en los negocios» o que «te aislarás del mundo». Lo que el ciclo señala es que la marea energética favorece el estudio profundo, la pausa analítica y la revisión interna por encima del impulso de expansión material desenfrenada. Quien desconoce el clima intentará forzar una siembra en pleno invierno y se frustrará al no ver brotes inmediatos; quien conoce el clima aprovechará la estación para afinar sus herramientas, estudiar el terreno y preparar con lucidez la cosecha del ciclo siguiente.
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--vidia-slate-700); margin: 0;">
+            Un <strong>Año Personal 7</strong> no determina que "te irá mal en los negocios", sino que señala que la marea energética favorece el estudio, la pausa y el discernimiento interno por encima de la expansión material desenfrenada. Conocer el clima te permite navegar con el viento a favor en lugar de remar a contracorriente.
           </p>
         </div>
 
@@ -418,4 +428,120 @@
 
         <div class="section-footer-nav no-print">
           <a href="#tabla-de-contenidos" class="btn-back-toc">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path
+            <span>^ Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 7. INTEGRACIÓN Y CIERRE -->
+      <section id="punto-7" class="content-section">
+        <h2 class="section-heading">7. La Integración de la Carta: La Dinámica del Viaje</h2>
+        <p class="section-subtext">El Mapa, el Conductor y la Ruta: Cómo Dialogan las Tres Dimensiones</p>
+
+        <p>
+          El mayor error en la práctica numerológica es interpretar números aislados. Una persona no es únicamente su Camino de Vida, ni se reduce a las letras de su nombre, ni está condicionada exclusivamente por su Año Personal. La maestría del consultor consiste en observar cómo conversan estas tres dimensiones entre sí:
+        </p>
+
+        <div class="note-box" style="background: #ffffff; border: 1px solid var(--vidia-slate-200); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 1.5rem 0;">
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--vidia-slate-900); margin-bottom: 0.75rem;">La Dinámica de Integración: El Mapa, el Conductor y la Ruta</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--vidia-slate-700); margin-bottom: 0.75rem;">
+            Una lectura profesional jamás interpreta estos tres niveles de manera aislada:
+          </p>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.65rem;">
+            <li style="position: relative; padding-left: 1.25rem; font-size: 0.95rem; color: var(--vidia-slate-700);">
+              <span style="position: absolute; left: 0; color: var(--vidia-indigo-600); font-weight: bold;">•</span>
+              <strong>Las Coordenadas Natales son el Mapa y el Terreno:</strong> Señalan la geografía básica con la que llegamos al mundo.
+            </li>
+            <li style="position: relative; padding-left: 1.25rem; font-size: 0.95rem; color: var(--vidia-slate-700);">
+              <span style="position: absolute; left: 0; color: var(--vidia-indigo-600); font-weight: bold;">•</span>
+              <strong>La Matriz Onomástica es el Vehículo y el Conductor:</strong> Describe las herramientas operativas con las que nos movemos.
+            </li>
+            <li style="position: relative; padding-left: 1.25rem; font-size: 0.95rem; color: var(--vidia-slate-700);">
+              <span style="position: absolute; left: 0; color: var(--vidia-indigo-600); font-weight: bold;">•</span>
+              <strong>Las Dinámicas Temporales son el Clima de la Ruta:</strong> Marca la estación en la que conduces, determinando cuándo avanzar o cuándo resguardarse.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          Tener un vehículo de enorme potencia en un terreno escarpado y bajo una tormenta invernal exige una estrategia muy distinta a conducirlo en autopista despejada. Comprender este diálogo integral es lo que transforma a la numerología de una simple curiosidad aritmética en una disciplina profunda de diagnóstico y soberanía biográfica.
+        </p>
+
+        <!-- SÍNTESIS EDITORIAL (PRINT 1) -->
+        <div class="summary-box">
+          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;">
+            <span class="badge-tag" style="background: #ede9fe; color: #6d28d9;">REPASO EDITORIAL</span>
+            <h4 class="summary-title" style="margin: 0;">Síntesis del Módulo I: Fundamentos y Arquitectura</h4>
+          </div>
+          <div class="summary-grid">
+            <div class="summary-col">
+              <h5>1. RAÍZ HISTÓRICA Y EPISTEMOLÓGICA</h5>
+              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0; line-height: 1.6;">
+                ✓ <strong>El origen científico de la vibración:</strong> Pitágoras demostró en el monocordio que la armonía auditiva obedece a proporciones numéricas exactas (2:1, 3:2). La numerología moderna traslada esa física de proporciones a la experiencia humana.<br><br>
+                ✓ <strong>Validación empírica:</strong> Sarah Joanna Dennis sistematizó la correspondencia entre acústica y alfabeto, y la Dra. Juno Jordan depuró el método tras 25 años de contraste clínico sobre biografías reales.
+              </p>
+            </div>
+            <div class="summary-col">
+              <h5>2. CONCEPTOS TÉCNICOS FUNDAMENTALES</h5>
+              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0; line-height: 1.6;">
+                ✓ <strong>Matriz Decimal de Conversión:</strong> El alfabeto se organiza del 1 al 9 asignando una vibración elemental a cada grafema.<br><br>
+                ✓ <strong>La Carta en 3 Dimensiones:</strong> Ningún número se lee aislado. Toda lectura profesional articula las Coordenadas Natales (fecha / terreno), la Matriz Onomástica (nombre / vehículo) y las Dinámicas Temporales (ciclos / clima).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOQUE COMERCIAL: LLAMADO A LA ACCIÓN Y PUENTE AL MÓDULO II -->
+        <div class="commercial-box no-print">
+          <span class="commercial-badge">HACIA LA PRÁCTICA</span>
+          <h3 class="commercial-title">Próximo Paso: Módulo II — La Matriz del Ser y los Arquetipos del 1 al 9</h3>
+          <p class="commercial-desc">
+            Ya conocés la estructura completa del mapa y cómo opera la carta. Ahora es momento de ponerle nombre y personalidad a cada frecuencia.
+            <br><br>
+            Si ya calculaste tus números en la <strong>App de Vidia</strong>, en el siguiente módulo vas a descubrir qué significan en profundidad: analizamos arquetipo por arquetipo del <strong>1 al 9</strong>, revelando sus talentos de fábrica (<strong>la Luz</strong>), sus puntos ciegos o patrones de bloqueo (<strong>la Sombra</strong>) y cómo opera cada vibración en tu vida cotidiana.
+          </p>
+
+          <div class="commercial-lock-card">
+            <p>
+              🔒 <strong>El acceso libre finaliza aquí.</strong> Los capítulos II al VI contienen el desarrollo arquetípico exhaustivo, las dinámicas de compatibilidad vincular, los ciclos temporales y la metodología clínica de cálculo profesional paso a paso.
+            </p>
+          </div>
+
+          <a href="https://vidia-portal.vercel.app/" target="_blank" rel="noopener" class="btn-checkout">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>Adquirir el Ebook Completo • Acceso Inmediato</span>
+          </a>
+        </div>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <span>^ Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- PIE DE PÁGINA EDITORIAL GLOBAL OSCURO -->
+  <footer class="global-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon" style="width: 26px; height: 26px; font-size: 0.85rem; border-radius: 6px;">V</div>
+          <span>Sistema Vidia • Formación Profesional en Numerología Pitagórica</span>
+        </div>
+        <div style="font-size: 0.8rem; color: #cbd5e1;">Manual Oficial del Estudiante • Módulo I</div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          Plataforma de estudio y calculadoras oficiales: 
+          <a href="https://vidia-portal.vercel.app/" target="_blank" rel="noopener">https://vidia-portal.vercel.app/</a>
+        </div>
+        <div class="footer-links no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-top" title="Volver al índice del módulo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            <span>Volver arriba</span>
+          </a>
+        </div>
+      </div>
