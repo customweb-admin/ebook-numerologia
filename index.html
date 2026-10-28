@@ -3,176 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema Vidia | Formación Profesional en Numerología Pitagórica</title>
+  <title>Sistema Vidia • Formación Profesional en Numerología Pitagórica</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Lora:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Ajustes específicos para el Hero de la Portada */
+    .hero-banner {
+      background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
+      color: #ffffff;
+      padding: 4.5rem 1.5rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hero-banner .hero-badge {
+      display: inline-block;
+      background: rgba(129, 140, 248, 0.2);
+      color: #c7d2fe;
+      border: 1px solid rgba(199, 210, 254, 0.3);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-banner .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #ffffff !important; /* Blanco legible garantizado */
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.025em;
+    }
+    .hero-banner .hero-subtitle {
+      font-size: 1.15rem;
+      color: #cbd5e1 !important; /* Gris claro de alto contraste */
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+    
+    /* Ilustración Hero SVG integrada */
+    .hero-svg-container {
+      max-width: 680px;
+      margin: 1rem auto 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #090d16;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVEGACIÓN STICKY SUPERIOR -->
-  <header class="sticky-header">
-    <a href="index.html" class="header-brand">
-      <div class="brand-badge">V</div>
-      <div class="brand-info">
-        <span class="brand-title">Vidia Numerología</span>
-        <span class="brand-sub">Manual Oficial del Estudiante</span>
-      </div>
-    </a>
-    <nav class="header-nav">
-      <a href="modulo-1.html" class="btn-nav">
-        Comenzar Lectura
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  <!-- CABECERA GLOBAL HOMOLOGADA -->
+  <header class="global-header no-print">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper" title="Portada Vidia">
+        <div class="brand-icon">V</div>
+        <div>
+          <div class="brand-title">Vidia Numerología</div>
+          <span class="brand-badge">MANUAL OFICIAL DEL ESTUDIANTE</span>
+        </div>
       </a>
-      <button onclick="window.print()" class="btn-nav btn-pdf">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-        Descargar Programa
-      </button>
-    </nav>
+
+      <nav class="nav-buttons">
+        <a href="modulo-1.html" class="btn-nav" title="Comenzar con el Módulo I">
+          <span>Comenzar Lectura</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+        <a href="https://vidia-portal.vercel.app/" class="btn-nav" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>App Vidia</span>
+        </a>
+        <button onclick="window.print()" class="btn-nav btn-nav-primary" title="Imprimir programa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Descargar Programa</span>
+        </button>
+      </nav>
+    </div>
   </header>
 
-  <main class="main-container">
-    <div class="content-sheet" id="top">
-      
-      <!-- HERO PRINCIPAL -->
-      <header class="chapter-header" style="text-align: center; border-bottom: none; margin-bottom: 2rem;">
-        <span class="badge-tag" style="margin-bottom: 0.75rem; background: #ede9fe; color: #4338ca; font-size: 0.8rem; padding: 4px 12px;">SISTEMA VIDIA</span>
-        <h1 class="chapter-title" style="font-size: 2.6rem;">Formación Profesional en Numerología Pitagórica</h1>
-        <p class="chapter-subtitle" style="max-width: 680px; margin: 0 auto;">
-          Un abordaje psicológico, riguroso y evolutivo que traduce las proporciones universales al autoconocimiento y la consultoría profesional.
-        </p>
-      </header>
+  <!-- HERO DE PORTADA CON TEXTO CLARO E ILUSTRACIÓN SVG -->
+  <section class="hero-banner">
+    <span class="hero-badge">SISTEMA VIDIA</span>
+    <h1 class="hero-title">Formación Profesional en Numerología Pitagórica</h1>
+    <p class="hero-subtitle">
+      Un abordaje psicológico, riguroso y evolutivo que traduce las proporciones universales al autoconocimiento y la consultoría profesional.
+    </p>
 
-      <!-- PREMISA EDITORIAL -->
-      <section class="premise-card" style="border-left-color: var(--vidia-accent);">
-        <div class="premise-title">MANIFIESTO PEDAGÓGICO</div>
-        <p class="premise-text">
-          La numerología seria no adivina el futuro: ofrece un mapa de afinación y comprensión biográfica. Desarrollada a partir de los fundamentos acústicos de Pitágoras y sistematizada empíricamente en el siglo XX por Sarah Joanna Dennis y la Dra. Juno Jordan, esta formación brinda al estudiante herramientas prácticas de diagnóstico personal y vinculación humana.
-        </p>
-      </section>
-
-      <!-- ÍNDICE MODULAR DEL CURSO -->
-      <section style="margin: 3rem 0;">
-        <h2 class="section-title">Estructura Curricular del Programa</h2>
-        <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--vidia-slate-600);">
-          El programa formativo consta de seis módulos correlativos diseñados para transitar de los fundamentos acústicos y filosóficos a la consulta profesional avanzada:
-        </p>
-
-        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-          
-          <!-- MÓDULO 1 -->
-          <div class="dimension-card temporal" style="transition: transform 0.2s ease;">
-            <div class="dimension-card-header" style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span class="badge-tag" style="background: #e0e7ff; color: #4338ca;">MÓDULO I • REVISADO</span>
-                <h3 style="margin-top: 0.3rem;"><a href="modulo-1.html" style="color: inherit; text-decoration: none;">Fundamentos e Historia</a></h3>
-              </div>
-              <a href="modulo-1.html" class="btn-nav" style="border-color: #4338ca; color: #4338ca; font-weight: 700;">
-                Abrir Módulo &rarr;
-              </a>
-            </div>
-            <div class="dimension-card-body">
-              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0;">
-                De la física acústica del monocordio de Pitágoras al legado empírico de Sarah Joanna Dennis y Juno Jordan. Anatomía en 3 dimensiones de la Carta Numerológica Integral (Eje Temporal, Identitario y Cíclico).
-              </p>
-            </div>
-          </div>
-
-          <!-- MÓDULO 2 -->
-          <div class="dimension-card" style="border-top: 4px solid var(--vidia-slate-300); opacity: 0.85;">
-            <div class="dimension-card-header" style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span class="badge-tag" style="background: #f1f5f9; color: var(--vidia-slate-600);">MÓDULO II • PRÓXIMAMENTE</span>
-                <h3 style="margin-top: 0.3rem;">La Matriz del Ser y los Arquetipos del 1 al 9</h3>
-              </div>
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--vidia-slate-400);">EN REVISIÓN</span>
-            </div>
-            <div class="dimension-card-body">
-              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0;">
-                Estudio profundo de las 9 frecuencias arquetípicas. Polaridades de luz y sombra. Criterio de reducción decimal y dinámicas de compatibilidad elemental.
-              </p>
-            </div>
-          </div>
-
-          <!-- MÓDULO 3 -->
-          <div class="dimension-card" style="border-top: 4px solid var(--vidia-slate-300); opacity: 0.85;">
-            <div class="dimension-card-header" style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span class="badge-tag" style="background: #f1f5f9; color: var(--vidia-slate-600);">MÓDULO III • PRÓXIMAMENTE</span>
-                <h3 style="margin-top: 0.3rem;">La Matriz Onomástica: El Nombre Revelado</h3>
-              </div>
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--vidia-slate-400);">EN REVISIÓN</span>
-            </div>
-            <div class="dimension-card-body">
-              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0;">
-                Desglose analítico del nombre legal completo: Impulso del Alma (vocales), Personalidad Exterior (consonantes), Número de Expresión y Plano de la Mente, Emoción, Físico e Intuición.
-              </p>
-            </div>
-          </div>
-
-          <!-- MÓDULO 4 -->
-          <div class="dimension-card" style="border-top: 4px solid var(--vidia-slate-300); opacity: 0.85;">
-            <div class="dimension-card-header" style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span class="badge-tag" style="background: #f1f5f9; color: var(--vidia-slate-600);">MÓDULO IV • PRÓXIMAMENTE</span>
-                <h3 style="margin-top: 0.3rem;">Frecuencias Maestras y Lecciones Kármicas</h3>
-              </div>
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--vidia-slate-400);">EN REVISIÓN</span>
-            </div>
-            <div class="dimension-card-body">
-              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0;">
-                El compromiso evolutivo de los números 11, 22, 33 y 44. Detección y abordaje integrador de deudas kármicas (13/4, 14/5, 16/7, 19/1) y letras faltantes en el cuadro de inclusión.
-              </p>
-            </div>
-          </div>
-
-          <!-- MÓDULO 5 -->
-          <div class="dimension-card ciclico" style="transition: transform 0.2s ease;">
-            <div class="dimension-card-header" style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span class="badge-tag" style="background: #dcfce7; color: #059669;">MÓDULO V • REVISADO</span>
-                <h3 style="margin-top: 0.3rem;"><a href="modulo-5.html" style="color: inherit; text-decoration: none;">Dinámicas Temporales y Ciclos Biográficos</a></h3>
-              </div>
-              <a href="modulo-5.html" class="btn-nav" style="border-color: #059669; color: #059669; font-weight: 700;">
-                Abrir Módulo &rarr;
-              </a>
-            </div>
-            <div class="dimension-card-body">
-              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0;">
-                Cálculo y diagnóstico del Eje Temporal: Camino de Vida, Día Natal, regla mística del 36 para los 4 Pináculos de Vida, Desafíos y la brújula estratégica del Año Personal (ciclos del 1 al 9).
-              </p>
-            </div>
-          </div>
-
-          <!-- MÓDULO 6 -->
-          <div class="dimension-card" style="border-top: 4px solid var(--vidia-slate-300); opacity: 0.85;">
-            <div class="dimension-card-header" style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <span class="badge-tag" style="background: #f1f5f9; color: var(--vidia-slate-600);">MÓDULO VI • PRÓXIMAMENTE</span>
-                <h3 style="margin-top: 0.3rem;">La Sesión de Consulta y Devolución Profesional</h3>
-              </div>
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--vidia-slate-400);">EN REVISIÓN</span>
-            </div>
-            <div class="dimension-card-body">
-              <p style="font-size: 0.88rem; color: var(--vidia-slate-600); margin: 0;">
-                Metodología de síntesis cruzada. Protocolo ético de devolución individual y vincular (sincretismo). Elaboración de informes profesionales escritos y gestión de la sesión en vivo.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- PIE DE PÁGINA -->
-      <footer class="chapter-footer">
-        <div>
-          <strong>Sistema Vidia</strong> • Formación Profesional en Numerología Pitagórica
-        </div>
-        <div class="footer-nav">
-          <a href="#top" class="btn-scroll-top">Subir al inicio</a>
-        </div>
-      </footer>
-
+    <!-- GRÁFICO OFICIAL DE PORTADA (EMBLEMA VIDIA / PITÁGORAS) -->
+    <div class="hero-svg-container">
+      <svg viewBox="0 0 900 420" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0a0e1a"/>
+            <stop offset="100%" stop-color="#1e1b4b"/>
+          </linearGradient>
+          <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4f46e5" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        
+        <rect width="900" height="420" fill="url(#bgGrad)"/>
+        
+        <!-- Círculos concéntricos de frecuencia -->
+        <circle cx="450" cy="210" r="170" fill="none" stroke="#312e81" stroke-width="1" stroke-dasharray="4,6" opacity="0.6"/>
+        <circle cx="450" cy="210" r="120" fill="none" stroke="#4338ca" stroke-width="1.2" opacity="0.5"/>
+        <circle cx="450" cy="210" r="70" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.4"/>
+        
+        <!-- Triángulo Sagrado / Tetraktys -->
+        <polygon points="450,90 330,300 570,300" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.7"/>
+        
+        <!-- Puntos nodales de vibración (1 al 9) -->
+        <circle cx="450" cy="90" r="8" fill="#c084fc"/>
+        <text x="450" y="80" fill="#e0e7ff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+        
+        <circle cx="410" cy="160" r="7" fill="#818cf8"/>
+        <text x="395" y="164" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">2</text>
+        
+        <circle cx="490" cy="160" r="7" fill="#818cf8"/>
+        <text x="505" y="164" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">3</text>
+        
+        <circle cx="370" cy="230" r="7" fill="#6366f1"/>
+        <text x="355" y="234" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">4</text>
+        
+        <circle cx="450" cy="230" r="9" fill="#a855f7"/>
+        <text x="450" y="234" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">5</text>
+        
+        <circle cx="530" cy="230" r="7" fill="#6366f1"/>
+        <text x="545" y="234" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">6</text>
+        
+        <circle cx="330" cy="300" r="7" fill="#4f46e5"/>
+        <text x="315" y="304" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">7</text>
+        
+        <circle cx="410" cy="300" r="7" fill="#4f46e5"/>
+        <text x="410" y="322" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">8</text>
+        
+        <circle cx="490" cy="300" r="7" fill="#4f46e5"/>
+        <text x="490" y="322" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">9</text>
+        
+        <!-- Línea horizontal de proporción armónica -->
+        <line x1="100" y1="365" x2="800" y2="365" stroke="url(#glowLine)" stroke-width="2"/>
+        <text x="450" y="390" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" letter-spacing="3" text-anchor="middle">LA MATRIZ PITAGÓRICA DEL SER • SISTEMA VIDIA</text>
+      </svg>
     </div>
+  </section>
+
+  <!-- CONTENIDO DE LA PORTADA -->
+  <main class="main-wrapper" style="margin-top: 3rem;">
+
+    <!-- MANIFIESTO PEDAGÓGICO -->
+    <div class="manifesto-card">
+      <div class="manifesto-title">Manifiesto Pedagógico</div>
+      <p class="manifesto-text">
+        La numerología seria no adivina el futuro: ofrece un mapa de afinación y comprensión biográfica. Desarrollada a partir de los fundamentos acústicos de Pitágoras y sistematizada empíricamente en el siglo XX por Sarah Joanna Dennis y la Dra. Juno Jordan, esta formación brinda al estudiante herramientas prácticas de diagnóstico personal y vinculación humana.
+      </p>
+    </div>
+
+    <!-- ESTRUCTURA CURRICULAR -->
+    <section class="curriculum-section" style="padding: 0;">
+      <h2 class="curriculum-title">Estructura Curricular del Programa</h2>
+      <p class="curriculum-desc">
+        El programa formativo consta de seis módulos correlativos diseñados para transitar de los fundamentos acústicos y filosóficos a la consulta profesional avanzada:
+      </p>
+
+      <div class="module-grid">
+        <!-- MÓDULO I -->
+        <article class="module-card">
+          <div class="module-card-body">
+            <span class="module-number">MÓDULO I • DISPONIBLE</span>
+            <h3>Fundamentos e Historia</h3>
+            <p>De la física acústica del monocordio de Pitágoras al legado empírico de Sarah Joanna Dennis y Juno Jordan. Anatomía en 3 dimensiones de la Carta Numerológica Integral (Eje Temporal, Identitario y Cíclico).</p>
+          </div>
+          <a href="modulo-1.html" class="btn-open-module">
+            <span>Abrir Módulo</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- MÓDULO II -->
+        <article class="module-card" style="opacity: 0.9;">
+          <div class="module-card-body">
+            <span class="badge-tag">MÓDULO II • PRÓXIMAMENTE</span>
+            <h3>La Matriz del Ser y los Arquetipos del 1 al 9</h3>
+            <p>Estudio profundo de las 9 frecuencias fundamentales. Polaridades de Luz y Sombra, patrones reactivos y claves de evolución en la vida cotidiana y vincular.</p>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #94a3b8; text-transform: uppercase;">En Revisión</span>
+        </article>
+
+        <!-- MÓDULO V -->
+        <article class="module-card">
+          <div class="module-card-body">
+            <span class="module-number">MÓDULO V • EN CURSO</span>
+            <h3>Manual de Cálculo y Dinámica Operativa</h3>
+            <p>Fórmulas matemáticas completas, reglas de reducción decimal, desglose de la matriz onomástica y cálculo preciso de pináculos y desafíos.</p>
+          </div>
+          <a href="modulo-5.html" class="btn-open-module">
+            <span>Abrir Módulo</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <!-- PIE DE PÁGINA GLOBAL OSCURO -->
+  <footer class="global-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon" style="width: 26px; height: 26px; font-size: 0.85rem; border-radius: 6px;">V</div>
+          <span>Sistema Vidia • Formación Profesional en Numerología Pitagórica</span>
+        </div>
+        <div style="font-size: 0.8rem; color: #cbd5e1;">Manual Oficial del Estudiante</div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          Plataforma de estudio y calculadoras oficiales: 
+          <a href="https://vidia-portal.vercel.app/" target="_blank" rel="noopener">https://vidia-portal.vercel.app/</a>
+        </div>
+        <div>
+          <a href="#top" style="color: #cbd5e1; text-decoration: none;">Volver arriba &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
