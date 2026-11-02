@@ -3,66 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Módulo V: Dinámicas Temporales y Ciclos Biográficos | Sistema Vidia</title>
+  <title>MÓDULO V: Dinámicas Temporales y Ciclos Biográficos • Vidia</title>
+  
+  <!-- Tipografías editoriales idénticas a la portada y Módulo I -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de estilos centralizada -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAVEGACIÓN STICKY SUPERIOR -->
-  <header class="sticky-header">
-    <a href="index.html" class="header-brand">
-      <div class="brand-badge">V</div>
-      <div class="brand-info">
-        <span class="brand-title">Vidia Numerología</span>
-        <span class="brand-sub">Ebook Interactivo &amp; PDF</span>
-      </div>
-    </a>
-    <nav class="header-nav">
-      <a href="index.html" class="btn-nav">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-        Índice
+  <!-- CABECERA GLOBAL OSCURA -->
+  <header class="global-header no-print">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper" title="Volver al índice general">
+        <div class="brand-icon">V</div>
+        <div>
+          <div class="brand-title">Vidia Numerología</div>
+          <span class="brand-badge">EBOOK INTERACTIVO &amp; PDF</span>
+        </div>
       </a>
-      <a href="modulo-1.html" class="btn-nav">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        Módulo I
-      </a>
-      <button onclick="window.print()" class="btn-nav btn-pdf">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-        Descargar PDF
-      </button>
-    </nav>
+
+      <nav class="nav-buttons" aria-label="Navegación del curso">
+        <a href="index.html" class="btn-nav" title="Volver al índice general del manual">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Índice</span>
+        </a>
+
+        <a href="modulo-1.html" class="btn-nav" title="Ir al Módulo I">
+          <span>Módulo I</span>
+        </a>
+
+        <a href="https://vidia-portal.vercel.app/" class="btn-nav" title="Ir a la App Web principal" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          <span>App Vidia</span>
+        </a>
+
+        <button onclick="window.print()" class="btn-nav btn-nav-primary" title="Imprimir este módulo en PDF">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Descargar PDF</span>
+        </button>
+      </nav>
+    </div>
   </header>
 
-  <main class="main-container">
-    <article class="content-sheet" id="top">
-      
-      <!-- ENCABEZADO DEL MÓDULO -->
-      <header class="chapter-header">
-        <div class="chapter-badges">
-          <span class="badge-module">MÓDULO V</span>
-          <span class="badge-tag">CICLOS VITALES</span>
+  <!-- LIENZO EDITORIAL BLANCO -->
+  <main class="main-wrapper">
+    <article class="document-sheet" id="top">
+
+      <!-- ENCABEZADO DEL MÓDULO CON TIPOGRAFÍA CINZEL -->
+      <header class="module-header">
+        <div class="module-meta">
+          <span class="module-number">MÓDULO V</span>
+          <span class="badge-tag">Ciclos Vitales</span>
         </div>
-        <h1 class="chapter-title">MÓDULO V: DINÁMICAS TEMPORALES Y CICLOS BIOGRÁFICOS</h1>
-        <p class="chapter-subtitle">El Clima de la Ruta: De las Coordenadas Natales al Cálculo de Pináculos y Años Personales</p>
+        <h1 class="module-title">MÓDULO V: DINÁMICAS TEMPORALES Y CICLOS BIOGRÁFICOS</h1>
+        <p class="module-subtitle">El Clima de la Ruta: De las Coordenadas Natales al Cálculo de Pináculos y Años Personales</p>
+
+        <!-- CAJA PREMISA METODOLÓGICA CON BORDE MORADO -->
+        <div class="callout-premise">
+          <div class="callout-title">Premisa Metodológica de Vidia</div>
+          <p class="callout-text">
+            El tiempo en la numerología pitagórica no es una línea homogénea y vacía, sino una marea de frecuencias cualitativas. Conocer las dinámicas temporales no sirve para predecir fatalidades, sino para alinear tus decisiones con la estación energética propicia: sembrar en el momento de inicio, consolidar en el de estructura y replegarse a reflexionar cuando el ciclo pide cierre.
+          </p>
+        </div>
       </header>
 
-      <!-- PREMISA METODOLÓGICA -->
-      <section class="premise-card">
-        <div class="premise-title">PREMISA METODOLÓGICA DE VIDIA</div>
-        <p class="premise-text">
-          El tiempo en la numerología pitagórica no es una línea homogénea y vacía, sino una marea de frecuencias cualitativas. Conocer las dinámicas temporales no sirve para predecir fatalidades, sino para alinear tus decisiones con la estación energética propicia: sembrar en el momento de inicio, consolidar en el de estructura y replegarse a reflexionar cuando el ciclo pide cierre.
-        </p>
-      </section>
+      <!-- TABLA DE CONTENIDOS DEL MÓDULO V -->
+      <nav id="tabla-de-contenidos" class="toc-card no-print" aria-label="Tabla de contenidos del capítulo">
+        <h2 class="toc-card-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          Índice del Capítulo
+        </h2>
+        <ul class="toc-list">
+          <li class="toc-item"><a href="#punto-1" class="toc-link"><span class="toc-num">1.</span><span>Coordenadas Natales: El Punto de Partida Biográfico</span></a></li>
+          <li class="toc-item"><a href="#punto-2" class="toc-link"><span class="toc-num">2.</span><span>Los 4 Pináculos de Vida: Las Grandes Estaciones Biográficas</span></a></li>
+          <li class="toc-item"><a href="#punto-3" class="toc-link"><span class="toc-num">3.</span><span>El Año Personal: El Compás de los 9 Años</span></a></li>
+        </ul>
+      </nav>
 
       <!-- SECCIÓN 1: COORDENADAS NATALES -->
-      <section>
-        <h2 class="section-title">1. Coordenadas Natales: El Punto de Partida Biográfico</h2>
+      <section id="punto-1" class="content-section">
+        <h2 class="section-heading">1. Coordenadas Natales: El Punto de Partida Biográfico</h2>
         <p>
           La fecha de nacimiento configura el <strong>Eje Temporal</strong> de la Carta Numerológica. A diferencia del nombre (que puede variar por adopción, matrimonio o elección legal), la fecha de nacimiento representa una coordenada inmutable: el instante exacto en que la conciencia individual toma forma en el tiempo histórico.
         </p>
 
-        <div class="table-wrapper">
-          <table class="vidia-table">
+        <!-- TABLA MAQUETADA CORRECTAMENTE -->
+        <div class="table-container">
+          <table class="data-table">
             <thead>
               <tr>
                 <th>Elemento Natal</th>
@@ -105,65 +136,81 @@
             Cuando Sarah Joanna Dennis (L. Dow Balliett) y la Dra. Juno Jordan estructuraron la carta moderna, descubrieron empíricamente que las personas nacidas en Noviembre (Mes 11) poseían una agudeza perceptiva y una sensibilidad psíquica que desaparecía de los diagnósticos si el mes se rebajaba a un simple 2 (1+1). Conservar el 11 en el mes nutre toda la suma del Camino de Vida con una vibración intuitiva superior.
           </p>
         </div>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <span>^ Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
       </section>
 
       <!-- SECCIÓN 2: LOS 4 PINÁCULOS -->
-      <section>
-        <h2 class="section-title">2. Los 4 Pináculos de Vida: Las Grandes Estaciones Biográficas</h2>
+      <section id="punto-2" class="content-section">
+        <h2 class="section-heading">2. Los 4 Pináculos de Vida: Las Grandes Estaciones Biográficas</h2>
         <p>
           Los <strong>Pináculos</strong> son las cuatro grandes etapas en las que se divide el recorrido vital de una persona. Cada pináculo ofrece una oportunidad específica de desarrollo y aprendizaje, marcando la atmósfera y el tipo de desafíos que predominarán durante décadas enteras.
         </p>
         <p>
           El cálculo de su duración se basa en el número místico pitagórico <strong>36</strong> (el número de la manifestación material completa). La edad de culminación del Primer Pináculo se obtiene restando el <em>Camino de Vida</em> de 36:
         </p>
-        <p style="text-align: center; margin: 1.5rem 0; font-family: var(--font-mono); font-weight: 700; color: var(--vidia-primary-dark); background: #f1f5f9; padding: 1rem; border-radius: 8px;">
+        
+        <p style="text-align: center; margin: 1.5rem 0; font-family: var(--font-mono); font-weight: 700; color: var(--vidia-indigo-700); background: var(--vidia-slate-100); padding: 1rem; border-radius: 8px; border: 1px solid var(--vidia-slate-200);">
           Edad de Cierre del 1.er Pináculo = 36 − Camino de Vida
         </p>
 
-        <div class="grid-2">
-          <div class="feature-card">
-            <div class="feature-card-header">PRIMER PINÁCULO (JUVENTUD)</div>
-            <div class="feature-card-title">Día + Mes Natal</div>
-            <p class="feature-card-text">
+        <!-- TARJETAS CON LA MISMA MAQUETACIÓN QUE EL MÓDULO I -->
+        <div class="architecture-box">
+          <div class="arch-node">
+            <div class="arch-label">PRIMER PINÁCULO (JUVENTUD)</div>
+            <div class="arch-value">Día + Mes Natal</div>
+            <div class="arch-desc">
               Abarca desde el nacimiento hasta aproximadamente los 27 a 35 años (según el Camino de Vida). Rige la formación del carácter, la relación con el mandato familiar y las primeras búsquedas de identidad propia.
-            </p>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-card-header">SEGUNDO PINÁCULO (CONSOLIDACIÓN)</div>
-            <div class="feature-card-title">Día + Año Natal</div>
-            <p class="feature-card-text">
+          <div class="arch-node">
+            <div class="arch-label">SEGUNDO PINÁCULO (CONSOLIDACIÓN)</div>
+            <div class="arch-value">Día + Año Natal</div>
+            <div class="arch-desc">
               Dura exactamente 9 años a partir del final del primero. Es una etapa de productividad concreta, asunción de compromisos laborales, de pareja o de proyectos de vida fundamentales.
-            </p>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-card-header">TERCER PINÁCULO (MADUREZ)</div>
-            <div class="feature-card-title">Pináculo 1 + Pináculo 2</div>
-            <p class="feature-card-text">
+          <div class="arch-node">
+            <div class="arch-label">TERCER PINÁCULO (MADUREZ)</div>
+            <div class="arch-value">Pináculo 1 + Pináculo 2</div>
+            <div class="arch-desc">
               Se extiende durante otros 9 años en plena adultez media. Constituye el momento de mayor integración psicológica y de afirmación de la propia vocación o liderazgo personal.
-            </p>
+            </div>
           </div>
-          <div class="feature-card highlight">
-            <div class="feature-card-header">CUARTO PINÁCULO (COSECHA VITAL)</div>
-            <div class="feature-card-title">Mes + Año Natal</div>
-            <p class="feature-card-text">
+          <div class="arch-node highlight">
+            <div class="arch-label">CUARTO PINÁCULO (COSECHA VITAL)</div>
+            <div class="arch-value">Mes + Año Natal</div>
+            <div class="arch-desc">
               Comienza al culminar el tercer pináculo y perdura durante el resto de la vida. Representa la sabiduría acumulada, el legado que se deja a los otros y la serenidad espiritual del camino transitado.
-            </p>
+            </div>
           </div>
+        </div>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <span>^ Subir a la Tabla de Contenidos</span>
+          </a>
         </div>
       </section>
 
       <!-- SECCIÓN 3: EL AÑO PERSONAL -->
-      <section>
-        <h2 class="section-title">3. El Año Personal: El Compás de los 9 Años</h2>
+      <section id="punto-3" class="content-section">
+        <h2 class="section-heading">3. El Año Personal: El Compás de los 9 Años</h2>
         <p>
           Mientras que los pináculos definen décadas, el <strong>Año Personal</strong> es la unidad de sincronía anual. Funciona como un reloj biográfico de 9 pasos:
         </p>
-        <p style="text-align: center; margin: 1.5rem 0; font-family: var(--font-mono); font-weight: 700; color: var(--vidia-emerald); background: #f0fdf4; padding: 1rem; border-radius: 8px; border: 1px solid #bbf7d0;">
+        
+        <p style="text-align: center; margin: 1.5rem 0; font-family: var(--font-mono); font-weight: 700; color: #047857; background: #f0fdf4; padding: 1rem; border-radius: 8px; border: 1px solid #bbf7d0;">
           Año Personal = Día Natal + Mes Natal + Año Universal en curso (reducido a un dígito)
         </p>
 
-        <div class="table-wrapper">
-          <table class="vidia-table">
+        <!-- TABLA DE LOS 9 AÑOS -->
+        <div class="table-container">
+          <table class="data-table">
             <thead>
               <tr>
                 <th style="width: 15%;">Año</th>
@@ -220,39 +267,62 @@
             </tbody>
           </table>
         </div>
+
+        <div class="section-footer-nav no-print">
+          <a href="#tabla-de-contenidos" class="btn-back-toc">
+            <span>^ Subir a la Tabla de Contenidos</span>
+          </a>
+        </div>
       </section>
 
       <!-- SÍNTESIS DEL MÓDULO V -->
-      <section class="summary-container">
-        <div class="summary-header">
-          <span class="badge-tag" style="background: #dcfce7; color: #059669;">REPASO EDITORIAL</span>
-          <h3 class="summary-title">Síntesis del Módulo V: Dinámicas Temporales</h3>
+      <div class="summary-box">
+        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;">
+          <span class="badge-tag" style="background: #ede9fe; color: #6d28d9;">REPASO EDITORIAL</span>
+          <h4 class="summary-title" style="margin: 0;">Síntesis del Módulo V: Dinámicas Temporales</h4>
         </div>
-
-        <div class="summary-section-title">Conceptos Temporales Fundamentales</div>
-        <ul class="summary-list">
+        
+        <ul class="styled-list">
           <li><strong>El Eje Temporal como Territorio:</strong> La fecha de nacimiento determina las constantes de partida y el reloj madurativo de la biografía.</li>
           <li><strong>Preservación del Mes 11:</strong> El mes de noviembre no se colapsa a 2, reconociendo la alta intuición identificada por Dennis y Jordan en sus estudios empíricos.</li>
           <li><strong>La Regla del 36:</strong> La estructura cuádruple de los pináculos organiza la vida en estaciones arquetípicas gobernadas por ciclos matemáticos rigurosos.</li>
           <li><strong>El Año Personal como Estrategia:</strong> Conocer en qué peldaño del 1 al 9 nos encontramos evita remar contra la corriente energética de cada período.</li>
         </ul>
-      </section>
+      </div>
 
-      <!-- PIE DE PÁGINA DEL CAPÍTULO -->
-      <footer class="chapter-footer">
-        <div>
-          <strong>Sistema Vidia</strong> • Formación Profesional en Numerología Pitagórica
-        </div>
-        <div class="footer-nav">
-          <a href="#top" class="btn-scroll-top">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
-            Subir al inicio
-          </a>
-        </div>
-      </footer>
+      <div class="section-footer-nav no-print" style="margin-top: 2rem;">
+        <a href="#tabla-de-contenidos" class="btn-back-toc">
+          <span>^ Subir a la Tabla de Contenidos</span>
+        </a>
+      </div>
 
     </article>
   </main>
+
+  <!-- PIE DE PÁGINA GLOBAL OSCURO -->
+  <footer class="global-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-icon" style="width: 26px; height: 26px; font-size: 0.85rem; border-radius: 6px;">V</div>
+          <span>Sistema Vidia • Formación Profesional en Numerología Pitagórica</span>
+        </div>
+        <div style="font-size: 0.8rem; color: #cbd5e1;">Manual Oficial del Estudiante • Módulo V</div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          Plataforma de estudio y calculadoras oficiales: 
+          <a href="https://vidia-portal.vercel.app/" target="_blank" rel="noopener">https://vidia-portal.vercel.app/</a>
+        </div>
+        <div class="footer-links no-print">
+          <a href="#top" class="btn-back-top" title="Volver al inicio">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"></path></svg>
+            <span>Volver arriba</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
