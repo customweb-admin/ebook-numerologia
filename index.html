@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vidia • Manual Oficial de Numerología Pitagórica Integral</title>
   
-  <!-- Tipografías de alta legibilidad editorial -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Hoja de estilos centralizada -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- CABECERA GLOBAL DE NAVEGACIÓN (OSCURA TIPO APP) -->
+  <!-- CABECERA GLOBAL -->
   <header class="global-header no-print">
     <div class="header-container">
-      <a href="https://vidia-portal.vercel.app/" class="brand-wrapper" title="Portal Principal Vidia">
+      <a href="index.html" class="brand-wrapper" title="Portada Vidia">
         <div class="brand-icon">V</div>
         <div>
           <div class="brand-title">Vidia Numerología</div>
@@ -26,40 +24,38 @@
         </div>
       </a>
 
-      <!-- Navegación y Acciones -->
       <nav class="nav-buttons" aria-label="Navegación general">
-        <a href="https://vidia-portal.vercel.app/" class="btn-nav" title="Ir al Portal y Calculadoras" target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <a href="https://vidia-portal.vercel.app/" class="btn-nav" title="Ir a la App Web" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           <span>Ir a la App Web</span>
         </a>
 
         <a href="#indice-general" class="btn-nav" title="Ver el índice de módulos">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
           <span>Índice</span>
         </a>
 
         <button onclick="window.print()" class="btn-nav btn-nav-primary" title="Imprimir libro completo">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           <span>Imprimir Libro Completo</span>
         </button>
       </nav>
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL: PORTADA EDITORIAL EN LIENZO BLANCO -->
+  <!-- LIENZO BLANCO EDITORIAL -->
   <main class="main-wrapper">
     <article class="document-sheet">
 
-      <!-- PORTADA DE LIBRO SOLEMNE -->
+      <!-- PORTADA DEL LIBRO -->
       <section class="hero-cover">
         <span class="hero-tag">Manual Oficial Teórico y Metodológico</span>
         <h1 class="hero-title">MANUAL VIDIA DE NUMEROLOGÍA PITAGÓRICA</h1>
         <p class="hero-subtitle">La Arquitectura Matemática del Ser y la Dinámica de los Ciclos Vitales</p>
         
-        <!-- GRÁFICO OFICIAL: SISTEMA CÍCLICO DECIMODÉCIMO CON FONDO CELESTE CLARO -->
-        <div style="max-width: 440px; margin: 2rem auto; user-select: none;">
-          <!-- Apunta a la imagen en tu servidor. Cambiar "sistema_ciclico.png" por tu ruta si lo pones en otra carpeta ej: "imagenes/sistema_ciclico.png" -->
-          <img src="sistema_ciclico.png" alt="Matriz de los 9 Arquetipos • Vidia" style="width: 100%; height: auto; display: block;">
+        <!-- CONTENEDOR DE LA IMAGEN DE LA MATRIZ -->
+        <div class="hero-image-box">
+          <img src="sistema_ciclico.png" alt="Matriz de los 9 Arquetipos • Vidia" class="hero-matrix-img">
         </div>
 
         <p class="hero-author">
@@ -84,7 +80,7 @@
         </p>
       </section>
 
-      <!-- PANEL DE CONTROL DE IMPRESIÓN Y DESCARGAS -->
+      <!-- PANEL DE DESCARGA E IMPRESIÓN -->
       <section class="print-panel no-print">
         <div class="print-panel-header">
           <div>
@@ -122,7 +118,7 @@
         <div class="modules-grid">
 
           <!-- MÓDULO I -->
-          <div class="module-card">
+          <article class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO I</span>
               <span class="badge-tag">Fundamentos</span>
@@ -133,14 +129,14 @@
             </p>
             <div class="module-card-footer">
               <span class="topics-pill">&bull; El Monocordio &bull; Las 3 Dimensiones &bull; Soberanía frente al Determinismo</span>
-              <div class="card-actions no-print">
+              <div class="no-print">
                 <a href="modulo-1.html" class="btn-read">Leer Módulo I &rarr;</a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- MÓDULO II -->
-          <div class="module-card">
+          <article class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO II</span>
               <span class="badge-tag">Arquetipos</span>
@@ -151,14 +147,14 @@
             </p>
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Del 1 al 9 &bull; Polaridad Luz y Sombra &bull; Dinámica Psicológica</span>
-              <div class="card-actions no-print">
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--vidia-slate-500); text-transform: uppercase;">Próximamente</span>
+              <div class="no-print">
+                <span class="badge-upcoming">Próximamente</span>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- MÓDULO III -->
-          <div class="module-card">
+          <article class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO III</span>
               <span class="badge-tag">Onomástica</span>
@@ -169,17 +165,17 @@
             </p>
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Matriz Decimal &bull; Sonido vs Grafía &bull; Nombre Legal de Nacimiento</span>
-              <div class="card-actions no-print">
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--vidia-slate-500); text-transform: uppercase;">Próximamente</span>
+              <div class="no-print">
+                <span class="badge-upcoming">Próximamente</span>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- MÓDULO IV -->
-          <div class="module-card">
+          <article class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO IV</span>
-              <span class="badge-tag">Frecuencias Mayores</span>
+              <span class="badge-tag">Frecuencias Maestras</span>
             </div>
             <h3 class="module-card-title">Números Maestros y Deudas Kármicas</h3>
             <p class="module-card-desc">
@@ -187,14 +183,14 @@
             </p>
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Frecuencias Maestras (11, 22, 33) &bull; Las 4 Deudas Kármicas &bull; Transformación Consciente</span>
-              <div class="card-actions no-print">
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--vidia-slate-500); text-transform: uppercase;">Próximamente</span>
+              <div class="no-print">
+                <span class="badge-upcoming">Próximamente</span>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- MÓDULO V -->
-          <div class="module-card" style="border: 2px solid var(--vidia-indigo-600); box-shadow: 0 4px 16px rgba(79, 70, 229, 0.08);">
+          <article class="module-card active-module">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO V &bull; GUÍA CENTRAL</span>
               <span class="badge-tag" style="background:#eef2ff; color:#4f46e5;">Disponible para Lectura</span>
@@ -205,14 +201,14 @@
             </p>
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Algoritmo de Reducción &bull; Ficha Técnica Oficial &bull; El Efecto Marea</span>
-              <div class="card-actions no-print">
+              <div class="no-print">
                 <a href="modulo-5.html" class="btn-read">Leer Módulo V &rarr;</a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- MÓDULO VI -->
-          <div class="module-card">
+          <article class="module-card">
             <div class="module-card-top">
               <span class="module-card-num">MÓDULO VI</span>
               <span class="badge-tag">Clínica Profesional</span>
@@ -223,11 +219,11 @@
             </p>
             <div class="module-card-footer">
               <span class="topics-pill">&bull; Protocolo de Devolución &bull; Código Ético Vidia &bull; Plantillas Clínicas</span>
-              <div class="card-actions no-print">
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--vidia-slate-500); text-transform: uppercase;">Próximamente</span>
+              <div class="no-print">
+                <span class="badge-upcoming">Próximamente</span>
               </div>
             </div>
-          </div>
+          </article>
 
         </div>
       </section>
@@ -235,7 +231,7 @@
     </article>
   </main>
 
-  <!-- PIE DE PÁGINA GLOBAL OSCURO -->
+  <!-- PIE DE PÁGINA GLOBAL -->
   <footer class="global-footer">
     <div class="footer-container">
       <div class="footer-top">
