@@ -304,13 +304,16 @@ strong { color: var(--vidia-slate-900); font-weight: 600; }
 
 /* Cards de Arquitectura / Cuadrantes / Monocordio */
 .architecture-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
   margin: 1.75rem 0;
 }
 
 .arch-node {
+  flex: 1 1 280px;
+  max-width: 420px;
   background: #ffffff;
   border: 1px solid var(--vidia-slate-200);
   border-radius: 10px;
@@ -320,8 +323,8 @@ strong { color: var(--vidia-slate-900); font-weight: 600; }
 }
 
 .arch-node.highlight {
-  border-color: #c7d2fe;
-  background: #faf5ff;
+  background: #ffffff;
+  border-color: var(--vidia-slate-200);
 }
 
 .arch-label {
