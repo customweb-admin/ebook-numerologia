@@ -743,6 +743,7 @@ strong { color: var(--vidia-slate-900); font-weight: 600; }
 }
 
 .btn-print-full {
+  text-decoration: none !important;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
