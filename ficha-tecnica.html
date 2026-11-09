@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Técnica • Dimensiones y Moduladores de la Carta • Vidia</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: #f8fafc; }
+    .ficha-sheet {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      border: 1px solid var(--vidia-slate-200);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .ficha-header {
+      border-bottom: 2px solid var(--vidia-slate-200);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .ficha-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+    .ficha-subtitle {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--vidia-indigo-600);
+      margin-bottom: 0.5rem;
+    }
+    .ficha-credits {
+      font-size: 0.85rem;
+      color: var(--vidia-slate-500);
+    }
+    .ficha-credits a {
+      color: var(--vidia-indigo-600);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .ficha-section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      margin: 2rem 0 0.85rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-left: 3px solid var(--vidia-indigo-600);
+      padding-left: 0.6rem;
+    }
+    .ficha-sub-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--vidia-indigo-700);
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    .ficha-note {
+      font-size: 0.88rem;
+      color: var(--vidia-slate-600);
+      margin-bottom: 0.75rem;
+      font-style: italic;
+    }
+    .data-table th {
+      background: #f1f5f9;
+      font-size: 0.8rem;
+    }
+    .data-table td {
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+    @media print {
+      body { background: #ffffff; }
+      .ficha-sheet {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+      }
+      .no-print { display: none !important; }
+      .data-table th { background: #f8fafc !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE ACCIÓN SUPERIOR NO IMPRIMIBLE -->
+  <aside class="no-print" style="background: var(--vidia-header-bg); padding: 0.75rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+      <a href="modulo-1.html#punto-4" class="btn-nav" style="color: #cbd5e1; text-decoration: none; font-size: 0.82rem; font-weight: 600;">
+        &larr; Volver al Módulo I
+      </a>
+      <div style="display: flex; gap: 0.6rem; align-items: center;">
+        <button onclick="window.print()" class="btn-print-full" style="cursor: pointer;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Imprimir / Guardar en PDF</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ficha-sheet">
+    <!-- ENCABEZADO OFICIAL DE LA FICHA -->
+    <header class="ficha-header">
+      <div>
+        <h1 class="ficha-title">FICHA TÉCNICA</h1>
+        <div class="ficha-subtitle">Arquitectura y Moduladores de la Carta Numerológica</div>
+        <p class="ficha-credits">
+          Material pedagógico desarrollado por <strong>Vidia</strong> &bull; Plataforma oficial: <a href="https://vidia-portal.vercel.app/" target="_blank" rel="noopener">https://vidia-portal.vercel.app/</a>
+        </p>
+      </div>
+      <button onclick="window.print()" class="btn-print-outline no-print" title="Imprimir esta Ficha">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span>Imprimir Ficha</span>
+      </button>
+    </header>
+
+    <!-- PARTE I: LAS TRES DIMENSIONES -->
+    <section>
+      <h2 class="ficha-section-title">Parte I: Las Tres Dimensiones de la Carta</h2>
+      <p class="ficha-note">Estructura fundamental que articula la lectura integral del mapa biográfico.</p>
+
+      <div class="table-container" style="margin: 0.75rem 0 1.5rem 0;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Dimensión</th>
+              <th style="width: 23%;">Fuente de Origen</th>
+              <th style="width: 25%;">Componentes Clave</th>
+              <th style="width: 30%;">Función en la Consulta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Eje Temporal<br><small>(La Ruta de Vida)</small></strong></td>
+              <td>Fecha exacta de nacimiento (inmutable).</td>
+              <td>Día Natal, Mes Natal, Año Natal y Camino de Vida.</td>
+              <td>Describe el terreno de juego, las herramientas temperamentales innatas y la dirección evolutiva de menor fricción.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Matriz Onomástica<br><small>(El Vehículo Humano)</small></strong></td>
+              <td>Nombre completo legal registrado al nacer.</td>
+              <td>Impulso del Alma (Vocales), Personalidad Exterior (Consonantes) y Expresión Total.</td>
+              <td>Describe la psicología profunda: los anhelos inconscientes, la fachada relacional y el motor operativo en la materia.</td>
+            </tr>
+            <tr>
+              <td><strong>3. Dinámica Temporal<br><small>(El Clima Estacional)</small></strong></td>
+              <td>Cruce de la Carta Natal con el Año Calendario.</td>
+              <td>Pináculos de Vida, Desafíos Biográficos y Año Personal.</td>
+              <td>Describe el clima estacional: cuándo sembrar, cuándo consolidar estructuras y cuándo soltar etapas que cumplieron su ciclo.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PARTE II: MODULADORES CUALITATIVOS -->
+    <section style="margin-top: 2rem;">
+      <h2 class="ficha-section-title">Parte II: Moduladores Cualitativos (Frecuencias Especiales)</h2>
+
+      <!-- NÚMEROS MAESTROS -->
+      <h3 class="ficha-sub-title">A. Números Maestros (Alto Voltaje Evolutivo)</h3>
+      <p class="ficha-note">Frecuencias compuestas por dígitos idénticos que no se reducen en sumas intermedias.</p>
+
+      <div class="table-container" style="margin: 0.5rem 0 1.5rem 0;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 14%; text-align: center;">Número</th>
+              <th style="width: 22%;">Frecuencia Base</th>
+              <th style="width: 32%;">Potencial Elevado</th>
+              <th style="width: 32%;">Exigencia Psicológica / Desafío</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600); font-size: 1.05rem;">11</td>
+              <td><strong>Base 2</strong> (Sensibilidad)</td>
+              <td>Canal intuitivo, inspiración espiritual y liderazgo visionario.</td>
+              <td>Superar la autoexigencia extrema, el nerviosismo interior y la duda sobre la propia valía.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600); font-size: 1.05rem;">22</td>
+              <td><strong>Base 4</strong> (Estructura)</td>
+              <td>Constructor maestro; capacidad de materializar proyectos de escala global o social.</td>
+              <td>No abrumarse ante la magnitud de la obra ni caer en el autoritarismo o el estrés material.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600); font-size: 1.05rem;">33</td>
+              <td><strong>Base 6</strong> (Amor/Armonía)</td>
+              <td>Maestro compasivo; protección comunitaria y guía desinteresada.</td>
+              <td>No inmolarse por los demás; aprender a sostener límites sanos sin desgaste reactivo.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- DEUDAS KÁRMICAS -->
+      <h3 class="ficha-sub-title">B. Deudas Kármicas (Entrenamiento Correctivo de la Conducta)</h3>
+      <p class="ficha-note">Patrones de conducta recurrentes que señalan aprendizajes específicos a integrar.</p>
+
+      <div class="table-container" style="margin: 0.5rem 0 1rem 0;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 14%; text-align: center;">Deuda</th>
+              <th style="width: 22%;">Base Operativa</th>
+              <th style="width: 32%;">Patrón de Bloqueo Recurrente</th>
+              <th style="width: 32%;">Aprendizaje Correctivo (La Clave)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600); font-size: 1.05rem;">13/4</td>
+              <td>Opera como <strong>4</strong></td>
+              <td>Frustración ante el esfuerzo sostenido, pereza, queja o tendencia a buscar atajos.</td>
+              <td><strong>Constancia y método:</strong> construir paso a paso con paciencia y disciplina sin resentimiento.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600); font-size: 1.05rem;">14/5</td>
+              <td>Opera como <strong>5</strong></td>
+              <td>Dispersión, impulsividad, escape de responsabilidades y excesos en los sentidos.</td>
+              <td><strong>Libertad con templanza:</strong> vivir la aventura manteniendo el orden interno y el compromiso.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600); font-size: 1.05rem;">16/7</td>
+              <td>Opera como <strong>7</strong></td>
+              <td>Orgullo intelectual, arrogancia, autosuficiencia rígida y desconexión afectiva.</td>
+              <td><strong>Apertura y humildad:</strong> permitir la vulnerabilidad, derribar la máscara y conectar con los demás.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600); font-size: 1.05rem;">19/1</td>
+              <td>Opera como <strong>1</strong></td>
+              <td>Autoritarismo, manipulación o la queja de autosuficiencia: «yo tengo que hacer todo solo».</td>
+              <td><strong>Liderazgo empático:</strong> conducir proyectos delegando con generosidad y sin aislarse.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

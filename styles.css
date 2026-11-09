@@ -725,13 +725,14 @@ strong { color: var(--vidia-slate-900); font-weight: 600; }
   align-items: center;
   gap: 0.45rem;
   background: #ffffff;
-  color: var(--vidia-slate-700);
+  color: var(--vidia-slate-700) !important;
   border: 1px solid var(--vidia-slate-300);
-  padding: 0.65rem 1rem;
+  padding: 0.5rem 0.95rem;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   cursor: pointer;
+  text-decoration: none !important;
   transition: all 0.2s ease;
 }
 
