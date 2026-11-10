@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Técnica • Matriz Alfabética y Fonética en Español • Vidia</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: #f8fafc; }
+    .ficha-sheet {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      border: 1px solid var(--vidia-slate-200);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .ficha-header {
+      border-bottom: 2px solid var(--vidia-slate-200);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .ficha-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+    .ficha-subtitle {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--vidia-indigo-600);
+      margin-bottom: 0.5rem;
+    }
+    .ficha-credits {
+      font-size: 0.85rem;
+      color: var(--vidia-slate-500);
+    }
+    .ficha-credits a {
+      color: var(--vidia-indigo-600);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .ficha-section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--vidia-slate-900);
+      margin: 2rem 0 0.85rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-left: 3px solid var(--vidia-indigo-600);
+      padding-left: 0.6rem;
+    }
+    .ficha-note {
+      font-size: 0.88rem;
+      color: var(--vidia-slate-600);
+      margin-bottom: 0.75rem;
+      font-style: italic;
+    }
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .matrix-table th {
+      background: var(--vidia-indigo-600);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 0.75rem 0.5rem;
+      border: 1px solid var(--vidia-indigo-700);
+    }
+    .matrix-table td {
+      border: 1px solid var(--vidia-slate-200);
+      padding: 0.85rem 0.5rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--vidia-slate-800);
+    }
+    .matrix-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+    .vowel-badge {
+      color: var(--vidia-indigo-600);
+      font-weight: 800;
+    }
+    @media print {
+      body { background: #ffffff; }
+      .ficha-sheet {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+      }
+      .no-print { display: none !important; }
+      .matrix-table th { background: var(--vidia-indigo-600) !important; color: #ffffff !important; -webkit-print-color-adjust: exact; }
+      .data-table th { background: #f8fafc !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE ACCIÓN SUPERIOR NO IMPRIMIBLE -->
+  <aside class="no-print" style="background: var(--vidia-header-bg); padding: 0.75rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+      <a href="modulo-1.html#punto-3" class="btn-nav" style="color: #cbd5e1; text-decoration: none; font-size: 0.82rem; font-weight: 600;">
+        &larr; Volver al Módulo I
+      </a>
+      <div style="display: flex; gap: 0.6rem; align-items: center;">
+        <button onclick="window.print()" class="btn-print-full" style="cursor: pointer;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Imprimir / Guardar en PDF</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ficha-sheet">
+    <header class="ficha-header">
+      <div>
+        <h1 class="ficha-title">FICHA TÉCNICA</h1>
+        <div class="ficha-subtitle">Matriz Alfabética Pitagórica y Criterios Fonéticos en Español</div>
+        <p class="ficha-credits">
+          Material pedagógico desarrollado por <strong>Vidia</strong> &bull; Plataforma oficial: <a href="https://vidia-portal.vercel.app/" target="_blank" rel="noopener">https://vidia-portal.vercel.app/</a>
+        </p>
+      </div>
+      <button onclick="window.print()" class="btn-print-full no-print" title="Imprimir esta Ficha">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span>Imprimir Ficha</span>
+      </button>
+    </header>
+
+    <!-- PARTE I: MATRIZ PITAGÓRICA -->
+    <section>
+      <h2 class="ficha-section-title">Parte I: Matriz Pitagórica Universal (Valores del 1 al 9)</h2>
+      <p class="ficha-note">El alfabeto occidental organizado en ciclos de 9 columnas según la frecuencia vibracional de cada grafema.</p>
+
+      <div class="table-container" style="margin: 0.75rem 0 1.5rem 0;">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="vowel-badge">A, Á</td>
+              <td>B</td>
+              <td>C</td>
+              <td>D</td>
+              <td class="vowel-badge">E, É</td>
+              <td>F</td>
+              <td>G</td>
+              <td>H</td>
+              <td class="vowel-badge">I, Í</td>
+            </tr>
+            <tr>
+              <td>J</td>
+              <td>K</td>
+              <td>L</td>
+              <td>M</td>
+              <td>N, Ñ</td>
+              <td class="vowel-badge">O, Ó</td>
+              <td>P</td>
+              <td>Q</td>
+              <td>R</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>T</td>
+              <td class="vowel-badge">U, Ú, Ü</td>
+              <td>V</td>
+              <td>W</td>
+              <td>X</td>
+              <td>Y</td>
+              <td>Z</td>
+              <td style="color: var(--vidia-slate-400); font-weight: 400;">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PARTE II: REGLAS FONÉTICAS -->
+    <section style="margin-top: 1.75rem;">
+      <h2 class="ficha-section-title">Parte II: Criterios Fonéticos de Conversión en Español</h2>
+      <p class="ficha-note">Directrices acústicas para evitar distorsiones en nombres registrados en lengua hispana.</p>
+
+      <div class="table-container" style="margin: 0.75rem 0 1.5rem 0;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Caso Fonético</th>
+              <th style="width: 20%; text-align: center;">Valor Oficial</th>
+              <th style="width: 25%;">Clasificación</th>
+              <th style="width: 30%;">Fundamento Acústico Vidia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tildes y Diéresis<br><small>(Á, É, Í, Ó, Ú, Ü)</small></strong></td>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600);">1, 5, 9, 6, 3</td>
+              <td><strong>Vocales Puras</strong></td>
+              <td>El acento prosódico intensifica el volumen (fuerza), pero no modifica la longitud de onda de la nota fundamental.</td>
+            </tr>
+            <tr>
+              <td><strong>Letra Ñ</strong></td>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600);">5</td>
+              <td><strong>Consonante</strong></td>
+              <td>Alveolar nasal idéntica en resonancia acústica a la letra N.</td>
+            </tr>
+            <tr>
+              <td><strong>La Letra H Muda</strong></td>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600);">8</td>
+              <td><strong>Consonante</strong></td>
+              <td>Aporta un anclaje estructural silencioso. Se computa siempre en la suma de las consonantes.</td>
+            </tr>
+            <tr>
+              <td><strong>Dígrafos<br><small>(CH, LL, RR)</small></strong></td>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600);">3+8=11<br>3+3=6<br>9+9=18&rarr;9</td>
+              <td><strong>Consonantes Compuestas</strong></td>
+              <td>Se calculan sumando cada grafema por separado, sin tablas especiales ajenas al alfabeto de 26 letras.</td>
+            </tr>
+            <tr>
+              <td><strong>Letra Y Vocálica<br><small>(Sonido "I")</small></strong></td>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600);">7</td>
+              <td><strong>Suma a Vocales</strong><br><small>(Impulso del Alma)</small></td>
+              <td>Cuando va sola ("y"), al final de palabra/sílaba ("Eloy", "Mary") o como único sonido vocálico ("Lyn").</td>
+            </tr>
+            <tr>
+              <td><strong>Letra Y Consonántica<br><small>(Sonido Fricativo)</small></strong></td>
+              <td style="text-align: center; font-weight: 800; font-family: var(--font-mono); color: var(--vidia-indigo-600);">7</td>
+              <td><strong>Suma a Consonantes</strong><br><small>(Personalidad Exterior)</small></td>
+              <td>Cuando acompaña a otra vocal formando diptongo: al inicio ("Yolanda") o intervocálica ("Reyes").</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PARTE III: SUMAS ONOMÁSTICAS -->
+    <section style="margin-top: 1.75rem;">
+      <h2 class="ficha-section-title">Parte III: Protocolo de Extracción Onomástica</h2>
+      <div class="table-container" style="margin: 0.75rem 0 1rem 0;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Coordenada</th>
+              <th style="width: 25%;">Letras a Sumar</th>
+              <th style="width: 25%;">Regla de Reducción</th>
+              <th style="width: 25%;">Pregunta que Responde</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Impulso del Alma</strong></td>
+              <td>Solo las <strong>Vocales</strong> de todos los nombres y apellidos.</td>
+              <td>Freno en 11, 22, 33 o registro de 13, 14, 16, 19 antes de raíz simple.</td>
+              <td>¿Qué anhela mi inconsciente y qué necesito en privado para sentir plenitud?</td>
+            </tr>
+            <tr>
+              <td><strong>Personalidad Exterior</strong></td>
+              <td>Solo las <strong>Consonantes</strong> de todos los nombres y apellidos.</td>
+              <td>Freno en 11, 22, 33 o registro de 13, 14, 16, 19 antes de raíz simple.</td>
+              <td>¿Cuál es mi máscara social y cómo me percibe el entorno exterior?</td>
+            </tr>
+            <tr>
+              <td><strong>Número de Expresión</strong></td>
+              <td><strong>Total de letras</strong> (Vocales + Consonantes).</td>
+              <td>Freno en 11, 22, 33 o registro de 13, 14, 16, 19 antes de raíz simple.</td>
+              <td>¿Cuáles son mis talentos operativos y mi vehículo de acción en la materia?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
