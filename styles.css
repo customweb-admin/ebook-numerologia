@@ -226,6 +226,7 @@ margin-bottom: 1.75rem;
 
 .hero-image-box {
 margin: 1.75rem auto;
+text-align: center;
 }
 
 .hero-matrix-img {
@@ -532,26 +533,25 @@ background-color: #eef2ff;
 }
 
 /* --------------------------------------------------------------------------
-Cajas de Arquitectura / Fórmulas Destacadas
+Cajas de Arquitectura / Tarjetas Destacadas (Centrado automático en impar)
 -------------------------------------------------------------------------- */
 .architecture-box {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 gap: 1.25rem;
 margin: 1.5rem 0 2rem 0;
 }
 
-.arch-node {
-background-color: #ffffff;
-border: 1.5px solid var(--vidia-slate-200);
+.arch-node,
+.arch-node.highlight {
+flex: 1 1 340px;
+max-width: calc(50% - 0.65rem);
+background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 100%);
+border: 1.5px solid var(--vidia-primary);
 border-radius: 10px;
 padding: 1.35rem 1.5rem;
-box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03);
-}
-
-.arch-node.highlight {
-background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 100%);
-border-color: var(--vidia-primary);
+box-shadow: 0 3px 10px rgba(67, 56, 202, 0.06);
 }
 
 .arch-label {
@@ -578,7 +578,7 @@ line-height: 1.55;
 }
 
 /* --------------------------------------------------------------------------
-Cuadrículas de Síntesis, Casos Clínicos y Cuadrantes
+Cuadrículas de Síntesis, Casos Clínicos y Cuadrantes (Centrado en impar)
 -------------------------------------------------------------------------- */
 .summary-box {
 background: linear-gradient(135deg, #f8fafc 0%, #f5f3ff 100%);
@@ -595,12 +595,15 @@ color: var(--vidia-slate-900);
 }
 
 .summary-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 gap: 1.25rem;
 }
 
 .summary-col {
+flex: 1 1 340px;
+max-width: calc(50% - 0.65rem);
 background-color: #ffffff;
 border: 1px solid var(--vidia-slate-200);
 border-radius: 10px;
@@ -958,6 +961,12 @@ font-size: 1.65rem;
 }
 .toc-list {
 grid-template-columns: 1fr;
+}
+.arch-node,
+.arch-node.highlight,
+.summary-col {
+max-width: 100%;
+flex-basis: 100%;
 }
 .module-card {
 padding: 1.35rem;
